@@ -112,23 +112,26 @@ body {
   margin-left: 5px;
 }
 
+/*==================================*/
+
 /* ========== SEÇÃO DE INSTITUIÇÕES PARCEIRAS ========== */
-.secao-parceiros {
-  background-color: var(--rosa-escuro);
-  padding: 3rem 0;
-  color: white;
+.secao-apresentacao {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: var(--dourado);
+    margin: 2rem 0;
+    border-radius: 10px;
 }
 
-.secao-parceiros h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
+.secao-apresentacao h2 {
+    color: var(--azul-medio) !important;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
 }
 
-.secao-parceiros p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  text-align: justify;
+.secao-apresentacao .destaque {
+    font-size: 1.3rem;
+    line-height: 1.8;
 }
 
 /* ========== CARDS DE CURSOS ========== */
@@ -203,7 +206,7 @@ body {
   padding: 1rem 0;
   text-align: center;
   margin: 0;         
-  width: 100vw;      /* Adicione esta linha para ocupar toda a largura da tela */
+  width: 100vw;      /* Para ocupar toda a largura da tela */
   position: relative;/* Garante que fique no fluxo normal */
   left: 50%;         /* Corrige o deslocamento causado pelo 100vw */
   right: 50%;
@@ -249,6 +252,11 @@ body.tema-escuro {
 
 .tema-escuro .card-img-top {
   background-color: #2a3a5a;
+}
+
+.tema-escuro .secao-apresentacao {
+    background-color: #4a1e5a;
+    color: var(--texto-escuro);
 }
 
 /* ========== RESPONSIVIDADE ========== */

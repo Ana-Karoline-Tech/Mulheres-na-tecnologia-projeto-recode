@@ -167,7 +167,7 @@ body {
 .letreiro {
     overflow: hidden;
     white-space: nowrap;
-    background-color: var(--azul-medio);
+    /* background-color: var(--azul-medio); */
     padding: 15px 0;
     margin: 2rem 0;
 }
@@ -178,7 +178,7 @@ body {
     animation: marquee 20s linear infinite;
     font-size: 1.5rem;
     font-weight: bold;
-    color: white;
+    color: rgb(217, 56, 145);
 }
 
 @keyframes marquee {
@@ -230,7 +230,8 @@ body.tema-escuro {
 }
 
 .tema-escuro .letreiro {
-    background-color: #4a1e5a;
+    /* background-color: #4a1e5a; */
+    color: var(--dourado);
 }
 
 /* ========== RESPONSIVIDADE ========== */
@@ -245,6 +246,6 @@ body.tema-escuro {
     
     .letreiro p {
         font-size: 1.2rem;
-        animation-duration: 15s;
+        animation-duration: 29s;
     }
 }

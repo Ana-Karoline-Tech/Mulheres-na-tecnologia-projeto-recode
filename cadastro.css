@@ -345,6 +345,33 @@ body.tema-escuro {
   color: var(--rosa-medio);
 }
 
+/* Rodapé */
+.rodape {
+ background-color: #4682b4; /* Azul médio */
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  margin: 0;         
+  width: 100vw;      /* Adicione esta linha para ocupar toda a largura da tela */
+  position: relative;/* Garante que fique no fluxo normal */
+  left: 50%;         /* Corrige o deslocamento causado pelo 100vw */
+  right: 50%;
+  transform: translateX(-50%);
+}
+
+.rodape a {
+  color: #ffd700; /* Dourado */
+  text-decoration: none;
+}
+
+.rodape a:hover {
+  color: #ff69b4; /* Rosa médio */
+}
+
+.voltar-topo {
+  margin-left: auto;
+}
+
 /* ========== RESPONSIVIDADE ========== */
 @media screen and (max-width: 768px) {
   .conteudo-cadastro {

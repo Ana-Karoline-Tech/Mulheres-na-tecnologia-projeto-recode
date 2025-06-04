@@ -1,0 +1,394 @@
+/* ========== VARIÁVEIS DE CORES ========== */
+:root {
+  --rosa-claro: #fff0f5;
+  --rosa-medio: #ff69b4;
+  --rosa-escuro: #d7368a;
+  --dourado: #ffd700;
+  --azul-medio: #4682b4;
+  --azul-escuro: #1a1a2e;
+  --texto-claro: #333;
+  --texto-escuro: #e6e6e6;
+}
+
+/* ========== ESTILOS GERAIS ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--rosa-claro);
+  color: var(--texto-claro);
+  transition: all 0.3s ease;
+}
+
+/* ========== NAVEGAÇÃO ========== */
+.navbar-rosa {
+  background-color: var(--rosa-medio) !important;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-navbar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav-link {
+  color: white !important;
+  font-weight: 500;
+  margin: 0 10px;
+}
+
+.nav-link:hover {
+  color: var(--dourado) !important;
+}
+
+/* ========== ALTERNADOR DE TEMA (DARK MODE) ========== */
+.alternador-tema {
+  position: relative;
+  margin-left: 20px;
+}
+
+.checkbox-alternador {
+  opacity: 0;
+  position: absolute;
+}
+
+.rotulo-alternador {
+  background-color: #111;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px;
+  position: relative;
+  height: 22px;
+  width: 40px;
+}
+
+.rotulo-alternador .bola-alternador {
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 1.5px;
+  left: 1.5px;
+  height: 18px;
+  width: 18px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.checkbox-alternador:checked + .rotulo-alternador .bola-alternador {
+  transform: translateX(18px);
+}
+
+.rotulo-alternador .bi-sun {
+  color: var(--dourado);
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.rotulo-alternador .bi-moon {
+  color: var(--rosa-medio);
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+/* ========== CONTAINER PRINCIPAL ========== */
+.container-cadastro {
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 150px);
+}
+
+/* ========== CONTEÚDO DO FORMULÁRIO ========== */
+.conteudo-cadastro {
+  display: flex;
+  background-color: white;
+  border-radius: 15px;
+  width: 100%;
+  min-height: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.conteudo-cadastro::before {
+  content: "";
+  position: absolute;
+  background-color: var(--rosa-medio);
+  width: 40%;
+  height: 100%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  left: 0;
+  transition: all 0.5s ease;
+}
+
+/* ========== COLUNAS ========== */
+.coluna {
+  width: 50%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+}
+
+.coluna-esquerda {
+  color: white;
+}
+
+.coluna-direita {
+  background-color: white;
+}
+
+/* ========== TÍTULOS ========== */
+.titulo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.titulo-primario {
+  color: white;
+}
+
+.titulo-secundario {
+  color: var(--azul-medio);
+}
+
+/* ========== DESCRIÇÕES ========== */
+.descricao {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.descricao-primaria {
+  color: white;
+}
+
+.descricao-secundaria {
+  color: var(--texto-claro);
+}
+
+/* ========== BOTÕES ========== */
+.botao {
+  border-radius: 25px;
+  text-transform: uppercase;
+  color: white;
+  font-size: 0.8rem;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.botao-primario {
+  background-color: transparent;
+  border: 2px solid var(--dourado);
+  color: var(--dourado);
+}
+
+.botao-primario:hover {
+  background-color: var(--dourado);
+  color: var(--azul-medio);
+}
+
+.botao-secundario {
+  background-color: var(--rosa-escuro);
+  border: 2px solid var(--rosa-escuro);
+}
+
+.botao-secundario:hover {
+  background-color: var(--dourado);
+  border-color: var(--dourado);
+  color: var(--azul-medio);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+/* ========== FORMULÁRIO ========== */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.grupo-input {
+  background-color: #f5f7fa;
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.icone-input {
+  color: var(--azul-medio);
+  padding: 0 5px;
+}
+
+.campo-input {
+  height: 45px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  padding: 10px;
+  outline: none;
+}
+
+.campo-input:focus + .icone-input {
+  color: var(--dourado);
+}
+
+.link-senha {
+  color: var(--azul-medio);
+  font-size: 0.8rem;
+  margin: 10px 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+.link-senha:hover {
+  text-decoration: underline;
+}
+
+/* ========== REDES SOCIAIS ========== */
+.redes-sociais {
+  margin: 1rem 0;
+}
+
+.lista-redes-sociais {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+}
+
+.item-rede-social {
+  border: 1px solid #cbd5e0;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: var(--azul-medio);
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.item-rede-social:hover {
+  background-color: var(--dourado);
+  color: white;
+  border-color: var(--dourado);
+}
+
+/* ========== ANIMAÇÕES ========== */
+.conteudo-login-js .conteudo-cadastro::before {
+  left: 60%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/* ========== DARK MODE ========== */
+body.tema-escuro {
+  background-color: var(--azul-escuro);
+  color: var(--texto-escuro);
+}
+
+.tema-escuro .conteudo-cadastro {
+  background-color: #16213e;
+}
+
+.tema-escuro .coluna-direita {
+  background-color: #16213e;
+}
+
+.tema-escuro .titulo-secundario {
+  color: var(--dourado);
+}
+
+.tema-escuro .descricao-secundaria {
+  color: var(--texto-escuro);
+}
+
+.tema-escuro .grupo-input {
+  background-color: #2a3a5a;
+}
+
+.tema-escuro .campo-input {
+  color: var(--texto-escuro);
+}
+
+.tema-escuro .icone-input {
+  color: var(--dourado);
+}
+
+.tema-escuro .link-senha {
+  color: var(--rosa-medio);
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media screen and (max-width: 768px) {
+  .conteudo-cadastro {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .conteudo-cadastro::before {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .coluna {
+    width: 100%;
+    padding: 1.5rem;
+  }
+  
+  .coluna-esquerda {
+    height: 200px;
+  }
+  
+  .conteudo-login-js .conteudo-cadastro::before {
+    top: calc(100% - 200px);
+    left: 0;
+    border-radius: 0 0 15px 15px;
+  }
+  
+  .formulario {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .titulo {
+    font-size: 1.5rem;
+  }
+  
+  .descricao {
+    font-size: 0.8rem;
+  }
+  
+  .botao {
+    padding: 10px 20px;
+    font-size: 0.7rem;
+  }
+}

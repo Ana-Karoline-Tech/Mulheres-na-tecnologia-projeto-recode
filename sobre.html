@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-tema="escuro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Mulheres na Tecnologia</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Ícones Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Chart.js para gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Nosso CSS -->
+    <link rel="stylesheet" href="sobre.css">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body class="tema-claro">
+    <div class="container">
+        <!-- Cabeçalho/Navegação -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-rosa">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="./assets/logo (2).jpg" alt="Logo" class="logo-navbar">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html"><i class="bi bi-house-heart-fill"></i> Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="sobre.html"><i class="bi bi-bookmark-heart-fill"></i> Sobre</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contato.html"><i class="bi bi-bookmark-heart-fill"></i> Contato</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="cursos.html"><i class="bi bi-bookmark-heart-fill"></i> Cursos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="cadastro.html"><i class="bi bi-bookmark-heart-fill"></i> Cadastro</a>
+                            </li>
+                        </ul>
+                        
+                        <!-- Alternador de Tema (Dark Mode) -->
+                        <div class="alternador-tema">
+                            <input type="checkbox" id="alternador" class="checkbox-alternador">
+                            <label for="alternador" class="rotulo-alternador">
+                                <i class="bi bi-sun"></i>
+                                <i class="bi bi-moon"></i>
+                                <span class="bola-alternador"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Conteúdo Principal -->
+        <main>
+            <!-- Seção de Apresentação -->
+            <section class="secao-apresentacao">
+                <h1>Bem-vindas ao nosso espaço dedicado à transformação e inclusão feminina na tecnologia</h1>
+                <p class="destaque">Acreditamos que a inclusão de mulheres, especialmente aquelas em situação de vulnerabilidade, é essencial para construir um futuro mais justo e inovador.</p>
+            </section>
+
+            <!-- Seção sobre Palestras -->
+            <section class="secao-palestras">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="assets/Palestra.webp" alt="Palestra" class="img-palestra">
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Transformando Vidas, Conectando Futuros</h2>
+                        <p>Nossa instituição promove encontros inspiradores em todo o país, dedicados a incentivar mulheres a adentrarem no mundo da tecnologia.</p>
+                    </div>
+                </div>
+                
+                <!-- Mais conteúdo da seção de palestras... -->
+            </section>
+
+            <!-- Seção de Gráficos -->
+            <section class="secao-graficos">
+                <h2>Dados sobre Mulheres na Tecnologia</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <canvas id="graficoMulheresTI"></canvas>
+                    </div>
+                    <div class="col-md-6">
+                        <canvas id="graficoMaesSolo"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção Missão, Visão e Valores -->
+            <section class="secao-mvv">
+                <h2>Nossos Pilares</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card-mvv">
+                            <h3>Missão</h3>
+                            <p>Promover a inclusão de mulheres na tecnologia, com foco especial em mães solo e mulheres em situação de vulnerabilidade.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-mvv">
+                            <h3>Visão</h3>
+                            <p>Ser referência global na inclusão de mulheres na tecnologia, impactando positivamente milhares de vidas.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-mvv">
+                            <h3>Valores</h3>
+                            <p>Equidade, Inovação Social, Transformação Digital e Solidariedade.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Letreiro Animado -->
+            <div class="letreiro">
+                <p>🚀 Transformando vidas através da tecnologia! 👩‍💻 Venha fazer parte dessa revolução!</p>
+            </div>
+        </main>
+
+        <!-- Rodapé -->
+        <footer class="rodape">
+            <p>&copy; 2025 Mulheres na Tecnologia. Todos os direitos reservados.</p>
+            <a href="#" class="botao-topo"><i class="bi bi-arrow-up-circle"></i> Voltar ao Topo</a>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Script para Gráficos -->
+    <script>
+        // Código para inicializar os gráficos...
+    </script>
+    
+    <!-- Script para Dark Mode -->
+    <script>
+        const alternador = document.getElementById('alternador');
+        
+        alternador.addEventListener('change', function() {
+            if(this.checked) {
+                document.body.classList.remove('tema-claro');
+                document.body.classList.add('tema-escuro');
+                document.documentElement.setAttribute('data-tema', 'escuro');
+            } else {
+                document.body.classList.remove('tema-escuro');
+                document.body.classList.add('tema-claro');
+                document.documentElement.setAttribute('data-tema', 'claro');
+            }
+        });
+    </script>
+</body>
+</html>

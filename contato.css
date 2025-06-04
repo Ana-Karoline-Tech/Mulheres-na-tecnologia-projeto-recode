@@ -1,0 +1,239 @@
+/* ========== ESTILOS GERAIS ========== */
+:root {
+    --rosa-claro: #fff0f5;
+    --rosa-medio: #ff69b4;
+    --rosa-escuro: #d7368a;
+    --dourado: #ffd700;
+    --azul-medio: #4682b4;
+    --azul-escuro: #1a1a2e;
+    --texto-claro: #333;
+    --texto-escuro: #e6e6e6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--rosa-claro);
+    color: var(--texto-claro);
+    transition: all 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ========== NAVEGAÇÃO ========== */
+.navbar-rosa {
+    background-color: #ff69b4 !important; /* Rosa médio */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  border-radius: 0; /* Remove cantos arredondados, se houver */
+  box-sizing: border-box;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.logo-navbar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+.nav-link:hover {
+    color: var(--dourado) !important;
+}
+
+/* ========== ALTERNADOR DE TEMA (DARK MODE) ========== */
+.alternador-tema {
+    position: relative;
+    margin-left: 20px;
+}
+
+.checkbox-alternador {
+    opacity: 0;
+    position: absolute;
+}
+
+.rotulo-alternador {
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px;
+    position: relative;
+    height: 22px;
+    width: 40px;
+}
+
+.rotulo-alternador .bola-alternador {
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 1.5px;
+    left: 1.5px;
+    height: 18px;
+    width: 18px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox-alternador:checked + .rotulo-alternador .bola-alternador {
+    transform: translateX(18px);
+}
+
+.rotulo-alternador .bi-sun {
+    color: var(--dourado);
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.rotulo-alternador .bi-moon {
+    color: var(--rosa-medio);
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* ========== SEÇÃO DE CONTATO ========== */
+.secao-contato {
+    padding: 3rem 0;
+}
+
+.img-contato {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.img-contato:hover {
+    transform: scale(1.02);
+}
+
+.formulario-contato {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-contato h1 {
+    color: var(--azul-medio);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--rosa-escuro);
+}
+
+.form-control {
+    border: 1px solid var(--rosa-medio);
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+.form-control:focus {
+    border-color: var(--dourado);
+    box-shadow: 0 0 0 0.25rem rgba(255, 105, 180, 0.25);
+}
+
+.btn-enviar {
+    background-color: var(--rosa-medio);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: var(--rosa-escuro);
+    transform: translateY(-2px);
+}
+
+.form-text {
+    color: var(--azul-medio);
+}
+
+/* ========== RODAPÉ ========== */
+.rodape {
+    background-color: #4682b4; /* Azul médio */
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  margin: 0;         /* Adicione esta linha */
+  width: 100vw;      /* Adicione esta linha para ocupar toda a largura da tela */
+  position: relative;/* Garante que fique no fluxo normal */
+  left: 50%;         /* Corrige o deslocamento causado pelo 100vw */
+  right: 50%;
+  transform: translateX(-50%);
+}
+
+.rodape a {
+    color: var(--dourado);
+    text-decoration: none;
+}
+
+.rodape a:hover {
+    color: var(--rosa-medio);
+}
+
+/* ========== DARK MODE ========== */
+body.tema-escuro {
+    background-color: var(--azul-escuro);
+    color: var(--texto-escuro);
+}
+
+.tema-escuro .formulario-contato {
+    background-color: #16213e;
+    color: var(--texto-escuro);
+}
+
+.tema-escuro .form-control {
+    background-color: #2a3a5a;
+    border-color: var(--dourado);
+    color: var(--texto-escuro);
+}
+
+.tema-escuro .form-label {
+    color: var(--dourado);
+}
+
+.tema-escuro .form-text {
+    color: var(--rosa-medio);
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 768px) {
+    .formulario-contato h1 {
+        font-size: 1.5rem;
+    }
+    
+    .secao-contato {
+        padding: 1.5rem 0;
+    }
+    
+    .img-contato {
+        margin-bottom: 2rem;
+    }
+}

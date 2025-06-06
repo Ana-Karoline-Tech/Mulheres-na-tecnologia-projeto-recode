@@ -1,6 +1,7 @@
 /* ========== VARIÁVEIS DE CORES ========== */
 :root {
   --rosa-claro: #fff0f5;
+  --rosa-claro: #e0a1c1;
   --rosa-medio: #ff69b4;
   --rosa-escuro: #d7368a;
   --dourado: #ffd700;
@@ -52,7 +53,20 @@
     padding-bottom: 0.5rem;
 }
 
+.form-text {
+    color: var(--azul-medio);
+}
 
+.form-control {
+    border: 1px solid var(--rosa-medio);
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+.form-control:focus {
+    border-color: var(--dourado);
+    box-shadow: 0 0 0 0.25rem rgba(255, 105, 180, 0.25);
+}
 
 /* Estilos para a tabela */
 .table {
@@ -68,6 +82,11 @@
 
 .table td, .table th {
     vertical-align: middle;
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--rosa-escuro);
 }
 
 /* Estilos para o dark mode */
@@ -94,6 +113,8 @@ body.tema-escuro {
     border-color: #4a1e5a;
 }
 
+
+
 .tema-escuro .table {
     background-color: #2a3a5a;
     color: var(--texto-escuro);
@@ -110,7 +131,7 @@ body.tema-escuro {
 }
 
 .tema-escuro .text-muted {
-    color: #a0a0a0 !important;
+    color: var(--rosa-claro) !important;
 }
 
 .tema-escuro .secao-cadastro h2, 
@@ -135,6 +156,15 @@ body.tema-escuro {
 .tema-escuro .table th {
     background-color: #4a1e5a;
 }
+
+/* .tema-escuro .form-text {
+    color: var(--rosa-medio);
+} */
+
+/* .tema-escuro .form-label {
+    color: var(--dourado);
+} */
+
 
 /* Responsividade */
 @media (max-width: 768px) {

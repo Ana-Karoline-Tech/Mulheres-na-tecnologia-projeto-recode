@@ -182,7 +182,7 @@ body {
   padding: 1rem 0;
   text-align: center;
   margin: 0;        
-  width: 100vw;      /* Adicione esta linha para ocupar toda a largura da tela */
+  width: 100vw;      
   position: relative;/* Garante que fique no fluxo normal */
   left: 50%;         /* Corrige o deslocamento causado pelo 100vw */
   right: 50%;

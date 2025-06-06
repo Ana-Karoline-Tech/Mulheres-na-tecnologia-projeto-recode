@@ -1,0 +1,15 @@
+.btn-rosa {
+    background-color: var(--rosa-medio);
+    color: #fff0f5;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn-rosa:hover {
+    background-color: var(--rosa-escuro);
+    color: rgb(255, 255, 255);
+    transform: scale(1.05);
+}

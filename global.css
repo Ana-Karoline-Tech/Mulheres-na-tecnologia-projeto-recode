@@ -194,6 +194,11 @@ body.tema-escuro {
   color: #ffd700;
 }
 
+.tema-escuro .card-ods .night-mode {
+  color: #fff;
+}
+
+
 .tema-escuro .btn-dourado {
   background-color: #b8860b;
   color: #fff;

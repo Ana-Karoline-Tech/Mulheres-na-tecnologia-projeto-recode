@@ -51,7 +51,7 @@ body {
 /* ========== ALTERNADOR DE TEMA (DARK MODE) ========== */
 .alternador-tema {
   position: relative;
-  margin-left: 20px;
+  margin: 25px
 }
 
 .checkbox-alternador {

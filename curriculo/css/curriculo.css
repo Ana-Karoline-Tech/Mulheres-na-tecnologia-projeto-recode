@@ -31,7 +31,7 @@
 /* ========== ALTERNADOR DE TEMA ========== */
 .alternador-tema {
     position: relative;
-    margin-left: 20px;
+    margin: 25px
 }
 
 .checkbox-alternador {

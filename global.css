@@ -159,7 +159,7 @@ body {
   position: relative;/* Garante que fique no fluxo normal */
   left: 50%;         /* Corrige o deslocamento causado pelo 100vw */
   right: 50%;
-  transform: translateX(-50%);oda
+  transform: translateX(-50%);
 }
 
 .rodape a {
@@ -216,7 +216,7 @@ body.tema-escuro {
 /* Alternador de tema (Dark Mode) */
 .alternador-tema {
   position: relative;
-  margin: 25px
+  margin: 25px;
 }
 
 .checkbox {

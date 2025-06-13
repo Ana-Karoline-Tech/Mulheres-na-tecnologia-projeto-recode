@@ -2,10 +2,8 @@
 <html lang="pt-BR" data-tema="claro">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,300&display=swap" rel="stylesheet">
+    <title>Vagas - Mulheres na Tecnologia</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="vagas/css/vagas.css">
@@ -13,15 +11,13 @@
     <link rel="stylesheet" href="vagas/css/records.css">
     <link rel="stylesheet" href="vagas/css/modal.css">
     <link rel="stylesheet" href="vagas/css/footer.css">
-    <script src="vagas/js/main.js" defer></script>
-    <title>Vagas de emprego</title>    
 </head>
 <body class="tema-claro">
-    <!-- Navbar Padronizada -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-rosa">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="./assets/logo (2).jpg" alt="Logo" class="logo-navbar">
+                <img src="assets/logo (2).jpg" alt="Logo" class="logo-navbar">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -45,7 +41,7 @@
                     </li>
                 </ul>
                 
-                <!-- Alternador de Tema (Dark Mode) -->
+                <!-- Alternador de Dark Mode -->
                 <div class="alternador-tema">
                     <input type="checkbox" id="alternador" class="checkbox-alternador">
                     <label for="alternador" class="rotulo-alternador">
@@ -59,99 +55,119 @@
     </nav>
 
     <main class="container-main">
-       <button type="button" class="button blue" id="cadastrarCliente">Cadastrar Vaga</button>
-       <table class="records">
-        <thead>
-            <tr>
-                <th>Empresa</th>
-                <th>Descrição da vaga</th>
-                <th>Nivel</th>
-                <th>Tipo</th>
-                <th>Salário</th>
-                <th>Ação</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>DTI Digital</td>
-                <td>Estamos contratando Desenvolvedor Front End Javascript...</td>
-                <td>Assistente</td>
-                <td>Tempo integral</td>
-                <td>R$1.950,00</td>               
-                <td>
-                    <button type="button" class="button green">Editar</button>
-                    <button type="button" class="button red">Excluir</button>
-                </td>               
-            </tr>
-            <tr>
-                <td>Sou Energy</td>
-                <td>Capacidade de comunicar claramente os desafios técnicos...</td>
-                <td>Junior</td>
-                <td>Híbrido</td>
-                <td>R$2.450,00</td>               
-                <td>
-                    <button type="button" class="button green">Editar</button>
-                    <button type="button" class="button red">Excluir</button>
-                </td>               
-            </tr>
-            <tr>
-                <td>Bradesco</td>
-                <td>Desenvolvimento de Software: Backend e Fullstack...</td>
-                <td>Treineer</td>
-                <td>Tempo integral</td>
-                <td>R$2.950,00</td>               
-                <td>
-                    <button type="button" class="button green">Editar</button>
-                    <button type="button" class="button red">Excluir</button>
-                </td>               
-            </tr>
-        </tbody>
-       </table>
-       
-       <div class="modal" id="modal">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>Vagas de Emprego</h1>
+            <button type="button" class="button blue" id="cadastrarVaga">
+                <i class="bi bi-plus-circle"></i> Cadastrar Vaga
+            </button>
+        </div>
+
+        <div class="table-responsive">
+            <table class="records" id="tabela-vagas">
+                <thead>
+                    <tr>
+                        <th>Logo</th>
+                        <th>Empresa</th>
+                        <th>Descrição</th>
+                        <th>Nível</th>
+                        <th>Tipo</th>
+                        <th>Salário</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Vagas serão inseridas aqui via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Modal para Cadastro -->
+        <div class="modal" id="modal-vaga">
             <div class="modal-content">
                 <header class="modal-header">
-                    <h2>Nova Vaga</h2>
-                    <span class="modal-close" id="modal-Close">&#10006</span>
+                    <h2 id="modal-titulo">Nova Vaga</h2>
+                    <span class="modal-close" id="modal-close">&#10006;</span>
                 </header>
-                <form class="modal-form">
-                    <input type="text" class="modal-field" placeholder="Nome da Empresa">
-                    <input type="text" class="modal-field" placeholder="Descrição da Vaga">
-                    <input type="text" class="modal-field" placeholder="Nivel">
-                    <input type="text" class="modal-field" placeholder="Tipo">
-                    <input type="text" class="modal-field" placeholder="Salário">
+                <form class="modal-form" id="form-vaga">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="logo">Logo da Empresa</label>
+                                <div class="d-flex align-items-center mb-3">
+                                    <img id="logo-preview" src="assets/empresa-default.png" alt="Logo Preview" class="img-thumbnail me-3" style="width: 80px; height: 80px; object-fit: contain;">
+                                    <input type="file" class="form-control" id="logo" name="logo" accept="image/*">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="empresa">Empresa*</label>
+                                <input type="text" class="modal-field" id="empresa" name="empresa" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="nivel">Nível*</label>
+                                <select class="modal-field" id="nivel" name="nivel" required>
+                                    <option value="">Selecione</option>
+                                    <option value="Estágio">Estágio</option>
+                                    <option value="Júnior">Júnior</option>
+                                    <option value="Pleno">Pleno</option>
+                                    <option value="Sênior">Sênior</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="tipo">Tipo*</label>
+                                <select class="modal-field" id="tipo" name="tipo" required>
+                                    <option value="">Selecione</option>
+                                    <option value="Presencial">Presencial</option>
+                                    <option value="Remoto">Remoto</option>
+                                    <option value="Híbrido">Híbrido</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="salario">Salário*</label>
+                                <input type="text" class="modal-field" id="salario" name="salario" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="link">Link para Vaga</label>
+                                <input type="url" class="modal-field" id="link" name="link" placeholder="https://">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="descricao">Descrição da Vaga*</label>
+                        <textarea class="modal-field" id="descricao" name="descricao" rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="beneficios">Benefícios</label>
+                        <textarea class="modal-field" id="beneficios" name="beneficios" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="exclusivaMulheres" name="exclusivaMulheres">
+                        <label class="form-check-label" for="exclusivaMulheres">Vaga exclusiva para mulheres</label>
+                    </div>
                 </form>
                 <footer class="modal-footer">
-                    <button class="button green">Salvar</button>
-                    <button class="button red">Cancelar</button>
+                    <button type="button" class="button green" id="btn-salvar">Salvar</button>
+                    <button type="button" class="button red" id="btn-cancelar">Cancelar</button>
                 </footer>
             </div>
-       </div>
+        </div>
     </main>
 
     <footer class="rodape">
-        <p>&copy; 2025 Mulheres na Tecnologia. Todos os direitos reservados.</p>
+        <p>&copy; 2025 - Todos os direitos reservados | Desenvolvido por: SQUAD 52 - Mulheres na Tecnologia - RECOD PRO AI</p>
         <a href="#" class="botao-topo"><i class="bi bi-arrow-up-circle"></i> Voltar ao Topo</a>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Script para Dark Mode -->
-    <script>
-        const alternador = document.getElementById('alternador');
-        
-        alternador.addEventListener('change', function() {
-            if(this.checked) {
-                document.body.classList.remove('tema-claro');
-                document.body.classList.add('tema-escuro');
-                document.documentElement.setAttribute('data-tema', 'escuro');
-            } else {
-                document.body.classList.remove('tema-escuro');
-                document.body.classList.add('tema-claro');
-                document.documentElement.setAttribute('data-tema', 'claro');
-            }
-        });
-    </script>
+    <script src="vagas/js/main.js"></script>
 </body>
 </html>

@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Ana-Karoline-Tech/Mulheres-na-tecnologia-projeto-recode#readme",
   "description": "",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^5.1.0",
     "pg": "^8.16.0"
   }

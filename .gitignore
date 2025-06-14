@@ -1,0 +1,6 @@
+# Ignora node_modules
+node_modules/
+
+# Ignora arquivos de ambiente (evita vazar senhas)
+.env
+*.env

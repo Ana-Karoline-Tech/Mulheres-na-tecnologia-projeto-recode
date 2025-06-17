@@ -128,7 +128,7 @@ body {
   content: "";
   position: absolute;
   background-color: var(--rosa-medio);
-  width: 40%;
+  width: 50%;
   height: 100%;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;

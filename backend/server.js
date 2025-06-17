@@ -60,7 +60,7 @@ app.post('/vagas', async (req, res) => {
   try {
     const query = `
       INSERT INTO vagas (titulo, empresa_id, cidade, estado, localizacao)
-      VALUES ($1, $2, $3, $4, ST_SetSRID(ST_MakePoint($5, $6), 4326)
+      VALUES ($1, $2, $3, $4, ST_SetSRID(ST_MakePoint($5, $6), 4326))
       RETURNING *;
     `;
     const result = await pool.query(query, [titulo, empresa_id, cidade, estado, long, lat]);
@@ -68,6 +68,60 @@ app.post('/vagas', async (req, res) => {
   } catch (err) {
     console.error('Erro ao cadastrar vaga:', err);
     res.status(500).json({ error: 'Erro ao criar vaga' });
+  }
+});
+
+// Tota para vagas Listar todas as vagas
+app.get('/vagas', async (req, res) => {
+  try {
+    const result = await pool.query('SELECT * FROM vagas ORDER BY id DESC');
+    res.json(result.rows);
+  } catch (err) {
+    console.error('Erro ao buscar vagas:', err);
+    res.status(500).json({ error: 'Erro interno' });
+  }
+});
+
+// Rota para buscar Buscar vagas por ID
+app.get('/vagas/:id', async (req, res) => {
+  const { id } = req.params;
+  try {
+    const result = await pool.query('SELECT * FROM vagas WHERE id = $1', [id]);
+    res.json(result.rows[0] || {});
+  } catch (err) {
+    console.error('Erro ao buscar vaga:', err);
+    res.status(500).json({ error: 'Erro interno' });
+  }
+});
+
+// Rota para atualizar uma vaga
+app.put('/vagas/:id', async (req, res) => {
+  const { id } = req.params;
+  const { titulo, descricao, empresa_id, cidade, estado } = req.body;
+  try {
+    const query = `
+      UPDATE vagas 
+      SET titulo = $1, descricao = $2, empresa_id = $3, cidade = $4, estado = $5
+      WHERE id = $6
+      RETURNING *`;
+    const result = await pool.query(query, 
+      [titulo, descricao, empresa_id, cidade, estado, id]);
+    res.json(result.rows[0]);
+  } catch (err) {
+    console.error('Erro ao atualizar vaga:', err);
+    res.status(500).json({ error: 'Erro interno' });
+  }
+});
+
+// Rota para deletar uma vaga
+app.delete('/vagas/:id', async (req, res) => {
+  const { id } = req.params;
+  try {
+    await pool.query('DELETE FROM vagas WHERE id = $1', [id]);
+    res.status(204).send();
+  } catch (err) {
+    console.error('Erro ao deletar vaga:', err);
+    res.status(500).json({ error: 'Erro interno' });
   }
 });
 

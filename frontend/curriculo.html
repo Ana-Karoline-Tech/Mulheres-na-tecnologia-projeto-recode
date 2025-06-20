@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-tema="claro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Currículo - Mulheres na Tecnologia</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Ícones Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Nosso CSS -->
+    <link rel="stylesheet" href="curriculo/css/style.css">
+    <link rel="stylesheet" href="curriculo/css/rodape.css">
+    <link rel="stylesheet" href="curriculo/css/curriculo.css">
+    <link rel="stylesheet" href="curriculo/css/button.css">
+    <link rel="stylesheet" href="curriculo/css/modal.css">
+    <script src="curriculo/js/main.js" defer></script>
+    <script src="curriculo/js/dark-mode.js" defer></script>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body class="tema-claro">
+    
+        <!-- Cabeçalho/Navegação -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-rosa">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/logo (2).jpg" alt="Logo" class="logo-navbar">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html"><i class="bi bi-house-heart-fill"></i> Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="sobre.html"><i class="bi bi-bookmark-heart-fill"></i> Sobre</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contato.html"><i class="bi bi-bookmark-heart-fill"></i> Contato</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="cursos.html"><i class="bi bi-bookmark-heart-fill"></i> Cursos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./cadastro/cadastro.html"><i class="bi bi-bookmark-heart-fill"></i>Login</a>
+                            </li>
+                        </ul>
+
+                        
+                        <!-- Alternador de Tema (Dark Mode) -->
+                        <div class="alternador-tema">
+                            <input type="checkbox" id="alternador" class="checkbox-alternador">
+                            <label for="alternador" class="rotulo-alternador">
+                                <i class="bi bi-sun"></i>
+                                <i class="bi bi-moon"></i>
+                                <span class="bola-alternador"></span>
+                            </label>
+                        </div>
+                    
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <!-- Conteúdo Principal -->
+        <div class="container"></div>
+        <main>
+            <!-- Seção de Cadastro de Currículo -->
+            <section class="secao-cadastro">
+                <div class="container">
+                    <h2>Cadastro de Currículo</h2>
+                    <p class="obs">Preencha seus dados para cadastrar seu currículo em nossa plataforma e aumentar suas chances na área de tecnologia.</p>
+                    
+                    <form id="form-curriculo" enctype="multipart/form-data">
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="card card-curriculo mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Informações Pessoais</h5>
+                                        
+                                        <div class="mb-3">
+                                            <label for="foto" class="form-label">Foto (opcional)</label>
+                                            <div class="d-flex align-items-center">
+                                                <img id="foto-preview" src="assets/user-default.jpg" alt="Preview da foto" class="img-thumbnail me-3" style="width: 80px; height: 80px; object-fit: cover;">
+                                                <input type="file" class="form-control" id="foto" name="foto" accept="image/*">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="nome" class="form-label">Nome Completo*</label>
+                                            <input type="text" class="form-control" id="nome" name="nome" required>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">E-mail*</label>
+                                            <input type="email" class="form-control" id="email" name="email" required>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="telefone" class="form-label">Telefone*</label>
+                                            <input type="tel" class="form-control" id="telefone" name="telefone" required>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="endereco" class="form-label">Endereço</label>
+                                            <input type="text" class="form-control" id="endereco" name="endereco">
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="linkedin" class="form-label">LinkedIn</label>
+                                            <input type="url" class="form-control" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/seu-perfil">
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="github" class="form-label">GitHub</label>
+                                            <input type="url" class="form-control" id="github" name="github" placeholder="https://github.com/seu-usuario">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="card card-curriculo mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Informações Profissionais</h5>
+                                        
+                                        <div class="mb-3">
+                                            <label for="cargo" class="form-label">Cargo Desejado*</label>
+                                            <input type="text" class="form-control" id="cargo" name="cargo" required>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="resumo" class="form-label">Resumo Profissional*</label>
+                                            <textarea class="form-control" id="resumo" name="resumo" rows="3" required></textarea>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="experiencia" class="form-label">Experiência Profissional</label>
+                                            <textarea class="form-control" id="experiencia" name="experiencia" rows="4"></textarea>
+                                            <small class="text-muted form-text">Inclua empresa, cargo, período e atividades realizadas</small>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="formacao" class="form-label">Formação Acadêmica</label>
+                                            <textarea class="form-control" id="formacao" name="formacao" rows="3"></textarea>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="cursos" class="form-label">Cursos Complementares</label>
+                                            <textarea class="form-control" id="cursos" name="cursos" rows="3"></textarea>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="habilidades" class="form-label">Habilidades Técnicas</label>
+                                            <input type="text" class="form-control" id="habilidades" name="habilidades" placeholder="Ex: JavaScript, Python, React, etc.">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn btn-secondary" id="btn-limpar">Limpar Formulário</button>
+                            <button type="submit" class="btn btn-rosa">Enviar Currículo</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            
+            <!-- Seção de Listagem de Currículos (CRUD) -->
+            <section class="secao-lista mt-5" id="lista-curriculos">
+                <div class="container">
+                    <h2>Meus Currículos Cadastrados</h2>
+                    <p class="obs">Visualize, edite ou exclua seus currículos cadastrados.</p>
+                    
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Foto</th>
+                                    <th>Nome</th>
+                                    <th>Cargo</th>
+                                    <th>E-mail</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabela-curriculos">
+                                <!-- Dados serão inseridos aqui via JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Rodapé -->
+        <footer class="rodape">
+            <p>&copy; 2025 Mulheres na Tecnologia. Todos os direitos reservados.</p>
+            <a href="#" class="botao-topo"><i class="bi bi-arrow-up-circle"></i> Voltar ao Topo</a>
+        </footer>
+    </div>
+
+    <!-- Modal para Visualização/Edição -->
+    <div class="modal fade" id="modal-curriculo" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Visualizar/Editar Currículo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <!-- Conteúdo será preenchido via JavaScript -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-rosa" id="btn-salvar-edicao">Salvar Alterações</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>   
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "mulheres-na-tecnologia-recode",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ana-Karoline-Tech/Mulheres-na-tecnologia-projeto-recode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ana-Karoline-Tech/Mulheres-na-tecnologia-projeto-recode/issues"
+  },
+  "homepage": "https://github.com/Ana-Karoline-Tech/Mulheres-na-tecnologia-projeto-recode#readme",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "pg": "^8.16.0"
+  }
+}

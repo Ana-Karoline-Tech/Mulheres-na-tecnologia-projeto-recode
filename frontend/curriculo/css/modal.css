@@ -1,0 +1,10 @@
+/* Estilos para o modal */
+.modal-content {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.modal-header {
+    background-color: var(--rosa-medio);
+    color: white;
+}

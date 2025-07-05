@@ -84,6 +84,10 @@
   position: relative;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* .title-code::before {
   content: '';
   position: absolute;
@@ -470,6 +474,12 @@
   background-color: #ff69b4; /* Rosa médio */
   border-radius: 50%;
   padding: 15px;
+}
+
+.card.h-100 {
+  min-height: 320px; /* ajuste conforme necessário */
+  display: flex;
+  flex-direction: row;
 }
 
 /* Dark Mode - Estilos do tema escuro */

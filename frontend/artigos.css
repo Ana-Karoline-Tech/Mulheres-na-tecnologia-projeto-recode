@@ -160,33 +160,43 @@ body {
   margin: 3rem 0;
   border-top: 2px solid #ffd700; /* Dourado */
 }
+            /* FOOTER */
+footer {
+            background: linear-gradient(to right, var(--azul-escuro), var(--azul-medio));
+            color: white;
+            padding: 60px 0 30px;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            margin-right: calc(-50vw + 50%);
+            position: relative;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--dourado);
+            padding-left: 5px;
+        }
 
-/* Rodapé */
-.rodape {
- background-color: #4682b4; /* Azul médio */
-  color: white;
-  padding: 1rem 0;
-  text-align: center;
-  margin: 0;         
-  width: 100vw;  
-  position: relative;/* Garante que fique no fluxo normal */
-  left: 50%;         /* Corrige o deslocamento causado pelo 100vw */
-  right: 50%;
-  transform: translateX(-50%);
-}
+      .btn-rosa {
+        background-color: var(--rosa-medio) !important;
+        color: #fff !important;
+        border: none;
+        border-radius: 0 25px 25px 0;
+        font-weight: 600;
+        transition: background 0.3s;
+      }
 
-.rodape a {
-  color: #ffd700; /* Dourado */
-  text-decoration: none;
-}
+      .btn-rosa:hover {
+        background-color: var(--rosa-escuro) !important;
+      }
 
-.rodape a:hover {
-  color: #ff69b4; /* Rosa médio */
-}
-
-.voltar-topo {
-  margin-left: auto;
-}
 
 /* Dark Mode - Estilos do tema escuro */
 body.tema-escuro {

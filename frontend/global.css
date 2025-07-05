@@ -510,6 +510,77 @@ body.tema-escuro {
   color: #4682b4;
 }
 
+/* DARK MODE */
+body.tema-escuro {
+  background-color: var(--azul-escuro);
+  color: var(--texto-escuro);
+}
+
+.tema-escuro .tech-hero-section {
+  background: linear-gradient(135deg, #2d1457 0%, #43156b 70%, #1e2746 100%);
+}
+
+.tema-escuro .tech-feminine-title,
+.tema-escuro .tech-subtitle,
+.tema-escuro .pixel-underline {
+  color: var(--texto-escuro);
+}
+
+.tema-escuro .title-gradient {
+  color: var(--dourado);
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+}
+
+.tema-escuro .title-code {
+  color: var(--dourado);
+}
+
+.tema-escuro .stat-card,
+.tema-escuro .initiative-card,
+.tema-escuro .testimonial-card {
+  background-color: #16213e;
+  color: var(--texto-escuro);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.tema-escuro .btn-rosa,
+.tema-escuro .btn-outline-rosa {
+  background-color: var(--dourado);
+  color: var(--azul-escuro);
+  border-color: var(--dourado);
+}
+
+.tema-escuro .btn-rosa:hover,
+.tema-escuro .btn-outline-rosa:hover {
+  background-color: #ffd700cc;
+  color: var(--azul-escuro);
+}
+
+.tema-escuro .pixel-underline::after {
+  background: linear-gradient(90deg, var(--dourado), transparent);
+}
+
+.tema-escuro .destaque-section {
+  background-color: #cb3290;
+  color: var(--texto-escuro);
+}
+
+.tema-escuro .testimonials-section {
+  background-color: #cb3290 !important; 
+}
+
+body.tema-escuro .text-muted {
+  color: var(--rosa-claro002) !important; 
+}
+
+.tema-escuro .card {
+  background-color: #24315e !important; /* Azul mais claro */
+  color: #fff !important;
+  border: none;
+}
+
 /* Alternador de tema (Dark Mode) */
 .alternador-tema {
   position: relative;

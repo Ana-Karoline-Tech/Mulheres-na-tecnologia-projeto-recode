@@ -17,9 +17,12 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="artigos.css">
+
+    <link rel="stylesheet" href="frontend/global.css" />
+    <link rel="stylesheet" href="frontend/style.css" />
+    <link rel="shortcut icon" href="frontend/assets/favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <div class="container tema-claro" data-bs-theme="light">
@@ -28,7 +31,7 @@
           <div class="container-fluid">
             <a class="navbar-brand" href="#">
               <img
-                src="./assets/logo (2).jpg"
+                src="assets/logo (2).jpg"
                 alt="Logo"
                 class="logo-navbar"
             /></a>
@@ -46,21 +49,20 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
-                    ><i class="bi bi-house-heart-fill"></i> Início</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="sobre.html"> <i class="bi bi-bookmark-heart-fill"></i> Sobre</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contato.html"> <i class="bi bi-bookmark-heart-fill"></i>Contato</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="cursos.html"> <i class="bi bi-bookmark-heart-fill"></i> Cursos</a> 
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="cadastro.html"> <i class="bi bi-bookmark-heart-fill"></i> Login </a> 
-                </li>
+                                <a class="nav-link" href="../index.html"><i class="bi bi-house-heart-fill"></i> Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="sobre.html"><i class="bi bi-bookmark-heart-fill"></i> Sobre</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="contato.html"><i class="bi bi-bookmark-heart-fill"></i> Contato</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="cursos.html"><i class="bi bi-bookmark-heart-fill"></i> Cursos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./cadastro/cadastro.html"><i class="bi bi-bookmark-heart-fill"></i>Login</a>
+                            </li>
               </ul>
               <!-- <form class="d-flex" role="search" aria-label="Formulário de pesquisa">
                 <label for="searchInput" class="visually-hidden">Pesquisar</label>
@@ -90,48 +92,11 @@
       </header>
 
       <main>
-        <div id="carrosselPrincipal" class="carousel slide" data-bs-ride="true">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carrosselPrincipal" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carrosselPrincipal" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carrosselPrincipal" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carrosselPrincipal" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carrosselPrincipal" data-bs-slide-to="4" aria-label="Slide 5"></button>
-            <button type="button" data-bs-target="#carrosselPrincipal" data-bs-slide-to="5" aria-label="Slide 6"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="1000">
-              <img src="./assets/palestra-ultra-realista004.jpg" class="d-block w-100 imagem-carrossel" alt="Palestra"/>
-            </div>
-            <div class="carousel-item" data-bs-interval="10000">
-              <img src="./assets/palestra-ultra-realista- CERTIFICADOS-CARROSSEL.jpg" class="d-block w-100 imagem-carrossel" alt="Certificados" title="Certificados"/>
-            </div>
-            <div class="carousel-item" data-bs-interval="1000">
-              <img src="./assets/img1.png" class="d-block w-100 imagem-carrossel" alt="Mulheres na tecnologia"/>
-            </div>
-            <div class="carousel-item" data-bs-interval="1000">
-              <img src="./assets/img3.png" class="d-block w-100 imagem-carrossel" alt="Diversidade"/>
-            </div>
-            <div class="carousel-item" data-bs-interval="1000">
-              <img src="./assets/png2.jpg" class="d-block w-100 imagem-carrossel" alt="Tecnologia"/>
-            </div>
-            <div class="carousel-item" data-bs-interval="1000">
-              <img src="./assets/palestra-ultra-realista005.jpg" class="d-block w-100 imagem-carrossel" alt="Evento"/>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carrosselPrincipal" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carrosselPrincipal" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Próximo</span>
-          </button>
-        </div>
+        
 
         <div class="card-group m-4 gap-3">
           <div class="card card-ods">
-            <img src="./assets/ods8.png" class="card-img-top" alt="ODS 8" />
+            <img src="assets/ods8.png" class="card-img-top" alt="ODS 8" />
             <div class="card-body">
               <h5 class="card-title">Objetivo de Desenvolvimento Sustentável</h5>
               <p class="card-text night-mode" >
@@ -141,7 +106,7 @@
             </div>
           </div>
           <div class="card card-ods">
-            <img src="./assets/ods5.jpg" class="card-img-top" alt="ODS 5" />
+            <img src="assets/ods5.jpg" class="card-img-top" alt="ODS 5" />
             <div class="card-body">
               <h5 class="card-title">Igualdade de gênero</h5>
               <p class="card-text night-mode">
@@ -151,7 +116,7 @@
             </div>
           </div>
           <div class="card card-ods">
-            <img src="./assets/ods4.png" class="card-img-top" alt="ODS 4" />
+            <img src="assets/ods4.png" class="card-img-top" alt="ODS 4" />
             <div class="card-body">
               <h5 class="card-title">Educação de qualidade</h5>
               <p class="card-text night-mode">
@@ -165,19 +130,19 @@
         <div class="container destaque">
           <div class="row mb-6">
             <div class="col-lg-4">
-              <img src="./assets/ada.jpg" class="img-destaque rounded-circle" alt="Ada Lovelace">
+              <img src="assets/ada.jpg" class="img-destaque rounded-circle" alt="Ada Lovelace">
               <h2 class="titulo-destaque">Ada Lovelace</h2>
               <p class="representantes">A primeira programadora. Abrindo a lista de mulheres importantes na tecnologia, Ada Lovelace foi a primeira pessoa a criar um programa computacional. Durante o século XIX, ela analisava e traduzia diversos materiais matemáticos e, a partir disso, Lovelace criou o primeiro algoritmo. Na época, ainda não existiam computadores capazes de testar esse código, somente anos depois foi possível comprovar que funcionava.</p>
               <p><a class="btn btn-dourado" href="https://lyncas.net/blog/mulheres-importantes-na-tecnologia/" target="_blank">Mais detalhes &raquo;</a></p>
             </div>
             <div class="col-lg-4">
-              <img src="./assets/carol.jpg" class="img-destaque rounded-circle" alt="Carol Shaw">
+              <img src="assets/carol.jpg" class="img-destaque rounded-circle" alt="Carol Shaw">
               <h2 class="titulo-destaque">Carol Shaw</h2>
               <p class="representantes">A primeira mulher desenvolvedora de jogos digitais. Carol teve seu primeiro contato na aula de matemática com a linguagem BASIC, e foi a partir dessas aulas que ela descobriu que existiam jogos digitais no computador, além de também conhecer a digitação de programas. Assim, Carol Shaw foi introduzida ao mundo da tecnologia, por meio da prática de programação.</p>
               <p><a class="btn btn-dourado" href="https://lyncas.net/blog/mulheres-importantes-na-tecnologia/" target="_blank">Mais detalhes &raquo;</a></p>
             </div>
             <div class="col-lg-4">
-              <img src="./assets/grece.jpg" class="img-destaque rounded-circle" alt="Grace Hopper">
+              <img src="assets/grece.jpg" class="img-destaque rounded-circle" alt="Grace Hopper">
               <h2 class="titulo-destaque">Grace Hopper</h2>
               <p class="representantes">A mãe da programação de computadores. Grace Hopper foi uma analista de sistemas da Marinha dos Estados Unidos nas décadas de 40 e 50, e durante esse tempo desenvolveu a linguagem de programação Flow-Matic, que serviu como base para a criação do COBOL (Linguagem Comum Orientada para Negócios) – usado até hoje em processamento de bancos de dados comerciais.</p>
               <p><a class="btn btn-dourado" href="https://lyncas.net/blog/mulheres-importantes-na-tecnologia/" target="_blank">Mais detalhes &raquo;</a></p>
@@ -193,7 +158,7 @@
               <a class="btn btn-dourado" href="https://brazil.generation.org/news/mulheres-na-tecnologia/" target="_blank" rel="noopener">Mais detalhes &raquo;</a>
             </div>
             <div class="col-md-5">
-              <img src="./assets/generation.jpg" class="img-thumbnail img-feature" alt="Generation" title="Generation"/>
+              <img src="assets/generation.jpg" class="img-thumbnail img-feature" alt="Generation" title="Generation"/>
             </div>
           </div>
         
@@ -206,7 +171,7 @@
               <a class="btn btn-dourado" href="https://www.cnnbrasil.com.br/tecnologia/mulheres-na-tecnologia/" target="_blank" rel="noopener">Mais detalhes &raquo;</a>
             </div>
             <div class="col-md-5 order-md-1">
-              <img src="./assets/cnn.jpg" class="img-thumbnail img-feature" alt="CNN Brasil" title="CNN Brasil"/>
+              <img src="assets/cnn.jpg" class="img-thumbnail img-feature" alt="CNN Brasil" title="CNN Brasil"/>
             </div>
           </div>
         
@@ -219,7 +184,7 @@
               <a class="btn btn-dourado" href="https://olhardigital.com.br/2024/03/08/pro/mulheres-na-tecnologia-desafios-e-legado/" target="_blank" rel="noopener">Mais detalhes &raquo;</a>
             </div>
             <div class="col-md-5">
-              <img src="./assets/olharDigital.jpg" class="img-thumbnail img-feature" alt="Olhar Digital" title="Olhar Digital"/>
+              <img src="assets/olharDigital.jpg" class="img-thumbnail img-feature" alt="Olhar Digital" title="Olhar Digital"/>
             </div>
           </div>
         </div>

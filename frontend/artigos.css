@@ -22,14 +22,14 @@ body {
   color: #333;
   transition: all 0.3s ease;
   line-height: 1.6;
+  overflow-x: hidden
 }
 
-.container .palestrantes {
-  max-width: 100% !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+.container {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
-
 
 /* Estilos do tema claro (padrão) */
 body {
@@ -79,13 +79,6 @@ body {
   object-fit: cover;
 }
 
-.carousel-wrapper {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-  position: relative;
-}
-
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: #ff69b4; /* Rosa médio */
@@ -119,17 +112,6 @@ body {
 
 .btn-dourado:hover {
   background-color: #daa520; /* Dourado mais escuro */
-  color: #fff;
-}
-/* Botão de inscrição */
-.btn-style {
-  background-color: #ff69b4; /* Rosa médio */
-  color: #fff;
-  border: none;
-  font-weight: 500;
-}
-.btn-style:hover {
-  background-color: #d7368a; /* Rosa escuro */
   color: #fff;
 }
 

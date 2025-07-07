@@ -1,3 +1,4 @@
+﻿@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap");
 /* ========== VARIÁVEIS DE CORES ========== */
 :root {
   --rosa-claro: #fff0f5;
@@ -10,14 +11,15 @@
   --texto-escuro: #e6e6e6;
 }
 
-/* ========== ESTILOS GERAIS ========== */
+/* ========== ESTILIZAÇÃO GERAL ========== */
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 
+}
 body {
   background-color: var(--rosa-claro);
   color: var(--texto-claro);
@@ -101,7 +103,7 @@ body {
 }
 
 /* ========== CONTAINER PRINCIPAL ========== */
-.container-cadastro {
+.container {
   width: 100%;
   max-width: 900px;
   margin: 2rem auto;
@@ -112,19 +114,21 @@ body {
   min-height: calc(100vh - 150px);
 }
 
-/* ========== CONTEÚDO DO FORMULÁRIO ========== */
-.conteudo-cadastro {
+/* ========== CONTEÚDO DO FORMULÁRIO !!!!reverrrr!!!!*****========== */
+.content {
   display: flex;
-  background-color: white;
+  background-color: #fff;
   border-radius: 15px;
-  width: 100%;
+  width: 960px;
+  height: auto;
   min-height: 500px;
+  justify-content: space-between;
+  align-items: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
 }
-
-.conteudo-cadastro::before {
+.content::before {
   content: "";
   position: absolute;
   background-color: var(--rosa-medio);
@@ -134,60 +138,38 @@ body {
   border-bottom-left-radius: 15px;
   left: 0;
   transition: all 0.5s ease;
-}
 
-/* ========== COLUNAS ========== PAREI AQUI!!!*/
-.coluna {
-  width: 50%;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  z-index: 1;
-}
-
-.coluna-esquerda {
-  color: white;
-}
-
-.coluna-direita {
-  background-color: white;
 }
 
 /* ========== TÍTULOS ========== */
-.titulo {
+.title {
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
+  text-align: center;
 }
-
-.titulo-primario {
-  color: white;
+.title-primary {
+  color: #fff;
 }
-
-.titulo-secundario {
-  color: var(--azul-medio);
+.title-second {
+  color: var(--azul-medio); 
 }
 
 /* ========== DESCRIÇÕES ========== */
-.descricao {
+.description {
   font-size: 0.9rem;
   line-height: 1.6;
   margin-bottom: 1rem;
 }
-
-.descricao-primaria {
-  color: white;
+.description-primary {
+  color: #fff;
 }
-
-.descricao-secundaria {
+.description-second {
   color: var(--texto-claro);
 }
 
 /* ========== BOTÕES ========== */
-.botao {
+.btn {
   border-radius: 25px;
   text-transform: uppercase;
   color: white;
@@ -199,24 +181,20 @@ body {
   margin-top: 1rem;
   transition: all 0.3s ease;
 }
-
-.botao-primario {
+.btn-primary {
   background-color: transparent;
   border: 2px solid var(--dourado);
   color: var(--dourado);
 }
-
-.botao-primario:hover {
+.btn-primary:hover {
   background-color: var(--dourado);
   color: var(--azul-medio);
 }
-
-.botao-secundario {
-  background-color: var(--rosa-escuro);
-  border: 2px solid var(--rosa-escuro);
+.btn-second {
+ background-color: var(--rosa-escuro);
+  border: 2px solid var(--rosa-medio);
 }
-
-.botao-secundario:hover {
+.btn-second:hover {
   background-color: var(--dourado);
   border-color: var(--dourado);
   color: var(--azul-medio);
@@ -224,63 +202,53 @@ body {
 }
 
 /* ========== FORMULÁRIO ========== */
-.formulario {
+.first-content {
+  display: flex;
+}
+.first-content .second-column {
+  z-index: 11;
+}
+.first-column {
+  width: 50%;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  width: 80%;
-}
-
-.grupo-input {
-  background-color: #f5f7fa;
-  display: flex;
+  justify-content: center;
   align-items: center;
-  margin: 0.5rem 0;
-  padding: 0 10px;
-  border-radius: 5px;
-}
-
-.icone-input {
-  color: var(--azul-medio);
-  padding: 0 5px;
-}
-
-.campo-input {
-  height: 45px;
-  width: 100%;
-  border: none;
-  background-color: transparent;
-  padding: 10px;
-  outline: none;
-}
-
-.campo-input:focus + .icone-input {
-  color: var(--dourado);
-}
-
-.link-senha {
-  color: var(--azul-medio);
-  font-size: 0.8rem;
-  margin: 10px 0;
   text-align: center;
-  text-decoration: none;
+  z-index: 1;
 }
-
-.link-senha:hover {
-  text-decoration: underline;
+.second-column {
+  width: 50%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
 }
 
 /* ========== REDES SOCIAIS ========== */
-.redes-sociais {
+.social-media {
   margin: 1rem 0;
 }
-
-.lista-redes-sociais {
+.link-social-media:not(:first-child) {
+  margin-left: 10px;
+}
+.link-social-media .item-social-media {
+  transition: background-color 0.5s;
+}
+.link-social-media:hover .item-social-media {
+  background-color: var(--dourado);
+  color: #fff;
+  border-color: #58af9b;
+}
+.list-social-media {
   display: flex;
   list-style-type: none;
-  justify-content: center;
 }
-
-.item-rede-social {
+.item-social-media {
   border: 1px solid #cbd5e0;
   border-radius: 50%;
   width: 35px;
@@ -292,141 +260,753 @@ body {
   transition: all 0.3s ease;
 }
 
-.item-rede-social:hover {
-  background-color: var(--dourado);
+/* FORMATAÇÃO FORMULÁRIOS */
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.form input {
+  height: 45px;
+  width: 100%;
+  border: none;
+  background-color: #ecf0f1;
+}
+
+.form input:focus {
+  outline: none;
+  border-bottom: 2px solid #d4af37; /* DOURADO: borda inferior do campo quando selecionado */
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #ecf0f1 inset !important;
+  -webkit-text-fill-color: #000 !important;
+}
+.label-input {
+  background-color: #ecf0f1;
+  display: flex;
+  align-items: center;
+  margin: 8px;
+}
+.icon-modify {
+  color: #7f8c8d;
+  padding: 0 5px;
+}
+
+/* second content*/
+
+.second-content {
+  position: absolute;
+  display: flex;
+}
+.second-content .first-column {
+  order: 2;
+  z-index: -1;
+}
+.second-content .second-column {
+  order: 1;
+  z-index: -1;
+}
+.password {
+  color: #34495e;
+  font-size: 14px;
+  margin: 15px 0;
+  text-align: center;
+}
+.password::first-letter {
+  text-transform: capitalize;
+}
+
+.sign-in-js .first-content .first-column {
+  z-index: -1;
+}
+
+.sign-in-js .second-content .second-column {
+  z-index: 11;
+}
+.sign-in-js .second-content .first-column {
+  z-index: 13;
+}
+
+.sign-in-js .content::before {
+  left: 50%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  animation: slidein 0.5s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+
+  z-index: 12;
+}
+
+.sign-up-js .content::before {
+  animation: slideout 0.5s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+
+  z-index: 12;
+}
+
+.sign-up-js .second-content .first-column,
+.sign-up-js .second-content .second-column {
+  z-index: -1;
+}
+
+.sign-up-js .first-content .second-column {
+  z-index: 11;
+}
+
+.sign-up-js .first-content .first-column {
+  z-index: 13;
+}
+
+/* DESLOCAMENTO CONTEÚDO ATRÁS DO CONTENT:BEFORE*/
+.sign-in-js .first-content .second-column {
+  z-index: -1;
+  position: relative;
+  animation: deslocamentoEsq 0.5s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+}
+
+.sign-up-js .second-content .second-column {
+  position: relative;
+  z-index: -1;
+  animation: deslocamentoDir 0.5s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+}
+
+/* Rodapé */
+        footer {
+  background: linear-gradient(to right, var(--azul-escuro), var(--azul-medio));
   color: white;
-  border-color: var(--dourado);
+  padding: 40px 0 20px; /* Reduzi o padding para ficar mais compacto */
+  width: 100%;
+  margin: 0; /* Removi as margens calculadas */
+  box-sizing: border-box;
 }
 
-/* ========== ANIMAÇÕES ========== */
-/* Adicione estas classes ao seu CSS */
-.conteudo-login-js .conteudo-cadastro::before {
-    left: 50%;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    transition: all 0.5s ease;
+/* Container interno para o conteúdo do footer */
+.footer-container {
+  max-width: 1200px; /* Ou o valor do seu container principal */
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.conteudo-cadastro-js .conteudo-cadastro::before {
-    left: 0;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    transition: all 0.5s ease;
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer-links a:hover {
+  color: var(--dourado);
+  padding-left: 5px;
+}
+
+/* Estilo para a newsletter */
+.newsletter {
+  display: flex;
+  margin-top: 15px;
+}
+
+.newsletter input {
+  border-radius: 25px 0 0 25px;
+  border: none;
+  padding: 10px 15px;
+  width: 250px;
+}
+
+.btn-rosa {
+  background-color: var(--rosa-medio) !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 0 25px 25px 0;
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.btn-rosa:hover {
+  background-color: var(--rosa-escuro) !important;
+}
+
+/* Rodapé inferior */
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9em;
 }
 
 /* ========== DARK MODE ========== */
+
+/* CORREÇÃO DEFINITIVA PARA A COLUNA ROSA NO DARK MODE */
+body.tema-escuro .content::before {
+  background-color: var(--rosa-escuro) !important; /* Força a cor rosa */
+  z-index: 1; /* Garante que fique acima de outros elementos */
+}
+
+body.tema-escuro .first-column {
+  background-color: transparent !important; /* Remove qualquer fundo herdado */
+  position: relative;
+  z-index: 2; /* Coloca o conteúdo acima do pseudo-elemento */
+}
+
+/* Remove qualquer overlay indesejado */
+body.tema-escuro .first-column::before,
+body.tema-escuro .first-column::after {
+  content: none !important;
+}
+
+/* Garante que o texto permaneça legível */
+body.tema-escuro .title-primary,
+body.tema-escuro .description-primary {
+  position: relative;
+  z-index: 3;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+
+
 body.tema-escuro {
   background-color: var(--azul-escuro);
   color: var(--texto-escuro);
 }
 
-.tema-escuro .conteudo-cadastro {
+body.tema-escuro .content {
   background-color: #16213e;
 }
 
-.tema-escuro .coluna-direita {
+body.tema-escuro .first-column,
+body.tema-escuro .second-column {
   background-color: #16213e;
 }
 
-.tema-escuro .titulo-secundario {
+body.tema-escuro .title-second {
   color: var(--dourado);
 }
 
-.tema-escuro .descricao-secundaria {
+body.tema-escuro .description-second {
   color: var(--texto-escuro);
 }
 
-.tema-escuro .grupo-input {
+body.tema-escuro .label-input {
   background-color: #2a3a5a;
 }
 
-.tema-escuro .campo-input {
+body.tema-escuro .form input {
+  background-color: #2a3a5a;
   color: var(--texto-escuro);
 }
 
-.tema-escuro .icone-input {
+body.tema-escuro .icon-modify {
   color: var(--dourado);
 }
 
-.tema-escuro .link-senha {
-  color: var(--rosa-medio);
+body.tema-escuro .password {
+  color: var(--dourado);
 }
 
-/* Rodapé */
-.rodape {
- background-color: #4682b4; /* Azul médio */
-  color: white;
-  padding: 1rem 0;
-  text-align: center;
-  margin: 0;         
-  width: 100vw;    
-  position: relative;/* Garante que fique no fluxo normal */
-  left: 50%;         /* Corrige o deslocamento causado pelo 100vw */
-  right: 50%;
-  transform: translateX(-50%);
+body.tema-escuro .btn-primary {
+  background-color: transparent;
+  border: 1px solid var(--dourado);
+  color: var(--dourado);
 }
 
-.rodape a {
-  color: #ffd700; /* Dourado */
-  text-decoration: none;
+body.tema-escuro .btn-primary:hover {
+  background-color: var(--dourado);
+  color: var(--azul-medio);
 }
 
-.rodape a:hover {
-  color: #ff69b4; /* Rosa médio */
+body.tema-escuro .btn-second {
+  background-color: var(--rosa-escuro);
+  border: 1px solid var(--dourado);
+  color: #fff;
 }
 
-.voltar-topo {
-  margin-left: auto;
+body.tema-escuro .btn-second:hover {
+  background-color: var(--dourado);
+  color: var(--azul-medio);
+  border: 1px solid var(--dourado);
 }
 
-/* ========== RESPONSIVIDADE ========== */
-@media screen and (max-width: 768px) {
-  .conteudo-cadastro {
+
+
+/*ANIMAÇÃO CSS PARA O CONTEÚDO*/
+
+@keyframes deslocamentoEsq {
+  from {
+    left: 0;
+    opacity: 1;
+    z-index: 12;
+  }
+
+  25% {
+    left: -80px;
+    opacity: 0.5;
+  }
+
+  50% {
+    left: -100px;
+    opacity: 0.2;
+  }
+
+  to {
+    left: -110px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes deslocamentoDir {
+  from {
+    left: 0;
+    z-index: 12;
+  }
+
+  25% {
+    left: 80px;
+  }
+
+  50% {
+    left: 100px;
+  }
+
+  to {
+    left: 110px;
+    z-index: -1;
+  }
+}
+
+/*ANIMAÇÃO CSS*/
+
+@keyframes slidein {
+  from {
+    left: 0;
+    width: 40%;
+  }
+
+  25% {
+    left: 5%;
+    width: 50%;
+  }
+
+  50% {
+    left: 25%;
+    width: 60%;
+  }
+
+  75% {
+    left: 45%;
+    width: 50%;
+  }
+
+  to {
+    left: 60%;
+    width: 40%;
+  }
+}
+
+@keyframes slideout {
+  from {
+    left: 60%;
+    width: 40%;
+  }
+
+  25% {
+    left: 45%;
+    width: 50%;
+  }
+
+  50% {
+    left: 25%;
+    width: 60%;
+  }
+
+  75% {
+    left: 5%;
+    width: 50%;
+  }
+
+  to {
+    left: 0;
+    width: 40%;
+  }
+}
+
+
+
+
+
+
+/* RESPONSIVIDADE */
+
+
+
+
+
+
+/* AJUSTES PARA A COLUNA ROSA */
+.content::before {
+  width: 50%;
+  height: 100%;
+  /* Mantenha as outras propriedades existentes */
+}
+
+/* Tablet (768px - 991px) */
+@media screen and (max-width: 991px) {
+  .content::before {
+    width: 45%; /* Reduz levemente a largura */
+    height: 80%; /* Aumenta a altura */
+    top: -5%; /* Compensa o aumento de altura */
+  }
+}
+
+/* Mobile Large (576px - 767px) */
+@media screen and (max-width: 767px) {
+  .content::before {
+    width: 100%;
+    height: 25%; /* Altura maior que a versão anterior */
+    top: 0;
+    left: 0;
+  }
+  
+  .sign-in-js .content::before {
+    top: 75%; /* Ajuste para o estado de login */
+    height: 25%;
+  }
+}
+
+/* Mobile Small (até 575px) */
+@media screen and (max-width: 575px) {
+  .content::before {
+    height: 30%; /* Aumenta ainda mais a altura */
+  }
+  
+  .sign-in-js .content::before {
+    top: 70%;
+    height: 30%;
+  }
+}
+
+
+/* ==================== */
+/* ESTRUTURA RESPONSIVA */
+/* ==================== */
+
+/* Desktop (acima de 1200px) - Mantém layout padrão */
+
+/* Tablet Landscape (992px - 1199px) */
+@media screen and (max-width: 1199px) {
+  .content {
+    width: 95%;
+    margin: 1.5rem auto;
+  }
+  
+  .form {
+    width: 70%;
+  }
+}
+
+/* Tablet Portrait (768px - 991px) */
+@media screen and (max-width: 991px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  .content {
     flex-direction: column;
+    height: auto;
     min-height: auto;
   }
   
-  .conteudo-cadastro::before {
+  .content::before {
     width: 100%;
-    height: 200px;
-    border-radius: 15px 15px 0 0;
+    height: 30%;
+    top: 0;
+    border-radius: 0;
   }
   
-  .coluna {
+  .first-column,
+  .second-column {
     width: 100%;
     padding: 1.5rem;
   }
   
-  .coluna-esquerda {
-    height: 200px;
+  .first-column {
+    padding-top: 2.5rem;
   }
   
-  /* .conteudo-login-js .conteudo-cadastro::before {
-    top: calc(100% - 200px);
-    left: 0;
-    border-radius: 0 0 15px 15px;
-  } */
+  .form {
+    width: 80%;
+    max-width: 400px;
+  }
   
-  .formulario {
-    width: 90%;
+  .sign-in-js .content::before {
+    top: 70%;
+    left: 0;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .titulo {
+/* Mobile Large (576px - 767px) */
+@media screen and (max-width: 767px) {
+  .content::before {
+    height: 100%;
+  }
+  
+  .form {
+    width: 90%;
+  }
+  
+  .title {
     font-size: 1.5rem;
   }
   
-  .descricao {
+  .btn {
+    padding: 12px 25px;
+  }
+  
+  .sign-in-js .content::before {
+    top: 75%;
+  }
+}
+
+/* Mobile Small (até 575px) */
+@media screen and (max-width: 575px) {
+  .content::before {
+    height: 20%;
+  }
+  
+  .form {
+    width: 100%;
+    padding: 0 10px;
+  }
+  
+  .first-column,
+  .second-column {
+    padding: 1rem;
+  }
+  
+  .title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .description {
     font-size: 0.8rem;
   }
   
-  .botao {
+  .sign-in-js .content::before {
+    top: 80%;
+  }
+}
+
+/* ANIMAÇÕES RESPONSIVAS */
+/* Animação para tablets */
+@media screen and (max-width: 991px) {
+  @keyframes deslocamentoEsq {
+    from {
+      top: 0;
+      opacity: 1;
+      z-index: 12;
+    }
+    to {
+      top: -100px;
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+  
+  @keyframes deslocamentoDir {
+    from {
+      top: 0;
+      z-index: 12;
+    }
+    to {
+      top: 100px;
+      z-index: -1;
+    }
+  }
+  
+  @keyframes slidein {
+    from {
+      top: 0;
+      height: 30%;
+    }
+    to {
+      top: 70%;
+      height: 30%;
+    }
+  }
+  
+  @keyframes slideout {
+    from {
+      top: 70%;
+      height: 30%;
+    }
+    to {
+      top: 0;
+      height: 30%;
+    }
+  }
+}
+
+/* Animação para mobile */
+@media screen and (max-width: 575px) {
+  @keyframes slidein {
+    from {
+      top: 0;
+      height: 20%;
+    }
+    to {
+      top: 80%;
+      height: 20%;
+    }
+  }
+  
+  @keyframes slideout {
+    from {
+      top: 80%;
+      height: 20%;
+    }
+    to {
+      top: 0;
+      height: 20%;
+    }
+  }
+}
+
+
+/* ==================== */
+/* AJUSTES ESPECÍFICOS */
+/* ==================== */
+
+/* Garante que os inputs não fiquem muito pequenos */
+.form input {
+  min-width: 0; /* Permite que reduza conforme necessário */
+}
+
+/* Ajusta o padding em telas muito pequenas */
+@media screen and (max-width: 400px) {
+  .form input {
+    padding: 0 10px;
+    font-size: 0.9rem;
+  }
+  
+  .btn {
     padding: 10px 20px;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+  }
+}
+
+
+
+/* ========== RESPONSIVIDADE ========== */
+
+/* TABLET (768px - 991px) */
+@media screen and (max-width: 991px) {
+  .content {
+    flex-direction: column;
+    min-height: 600px;
+  }
+  
+  .content::before {
+    width: 100%;
+    height: 40%; /* Aumentado para 40% */
+    top: 0;
+    border-radius: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .first-column, 
+  .second-column {
+    width: 100%;
+    padding: 2rem;
+  }
+  
+  .first-column {
+    height: 40%;
+    padding-bottom: 1.5rem;
+  }
+  
+  .second-column {
+    height: 60%;
+  }
+  
+  /* Estado de login */
+  .sign-in-js .content::before {
+    top: 60%;
+    height: 40%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}
+
+/* MOBILE (até 767px) */
+@media screen and (max-width: 767px) {
+  .content {
+    min-height: 650px;
+  }
+  
+  .content::before {
+    height: 45%; /* Aumentado ainda mais */
+  }
+  
+  .first-column {
+    height: 45%;
+    padding: 1.5rem;
+  }
+  
+  .second-column {
+    height: 55%;
+    padding: 1.5rem;
+  }
+  
+  .sign-in-js .content::before {
+    top: 55%;
+    height: 45%;
+  }
+  
+  /* Elementos do formulário */
+  .form {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* MOBILE PEQUENO (até 480px) */
+@media screen and (max-width: 480px) {
+  .content::before {
+    height: 50%; /* Máximo de altura para a faixa rosa */
+  }
+  
+  .first-column {
+    height: 50%;
+    padding: 1.5rem 1rem;
+  }
+  
+  .second-column {
+    height: 50%;
+    padding: 1.5rem 1rem;
+  }
+  
+  .sign-in-js .content::before {
+    top: 50%;
+    height: 50%;
+  }
+  
+  .title {
+    font-size: 1.5rem;
   }
 }

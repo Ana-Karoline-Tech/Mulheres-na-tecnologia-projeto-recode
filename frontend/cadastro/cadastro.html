@@ -47,6 +47,9 @@
                             <a class="nav-link" href="../cursos.html"><i class="bi bi-bookmark-heart-fill"></i> Cursos</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="artigos.html"> <i class="bi bi-bookmark-heart-fill"></i> Artigos</a> 
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link active" href="cadastro.html"><i class="bi bi-bookmark-heart-fill"></i> Login</a>
                         </li>
                     </ul>
@@ -64,135 +67,178 @@
             </div>
         </nav>
     </header>
-<section>
-    <!-- Conteúdo Principal -->
-    <div class="container-cadastro">
-        <div class="conteudo-cadastro">
-            <!-- Primeira Coluna (Cadastro) -->
-            <div class="coluna coluna-esquerda">
-                <h2 class="titulo titulo-primario">Sua Jornada Tech Começa Aqui!</h2>
-                <p class="descricao descricao-primaria">
-                    Conecte-se com oportunidades exclusivas e mentorias
-                </p>
-                <p class="descricao descricao-primaria">TORNE-SE TECNOLÓGICA</p>
-                <button id="signin" class="botao botao-primario">
-                    EMPRESAS CLICAR AQUI
-                </button>
-            </div>
-            
-            <!-- Segunda Coluna (Login) -->
-            <div class="coluna coluna-direita">
-                <h2 class="titulo titulo-secundario">👩‍🎓 Login para alunas 👨‍💻</h2>
-                <div class="redes-sociais">
-                    <ul class="lista-redes-sociais">
-                        <li class="item-rede-social">
-                            <i class="fab fa-facebook-f"></i>
-                        </li>
-                        <li class="item-rede-social">
-                            <i class="fab fa-google"></i>
-                        </li>
-                        <li class="item-rede-social">
-                            <i class="fab fa-linkedin-in"></i>
-                        </li>
-                    </ul>
-                </div>
-                
-                <p class="descricao descricao-secundaria">
-                    ou use seu e-mail para login:
-                </p>
-                
-                <form class="formulario">
-                    <!-- <div class="grupo-input">
-                        <i class="fas fa-user icone-input"></i>
-                        <input type="text" class="campo-input" placeholder="Nome" required>
-                    </div> -->
-                    
-                    <div class="grupo-input">
-                        <i class="fas fa-envelope icone-input"></i>
-                        <input type="email" class="campo-input" placeholder="E-mail" required>
-                    </div>
-                    
-                    <div class="grupo-input">
-                        <i class="fas fa-lock icone-input"></i>
-                        <input type="password" class="campo-input" placeholder="Senha" required>
-                    </div>
-                    
-                    <!-- <button type="submit" class="botao botao-secundario">Cadastrar</button> -->
-                    <a href="../curriculo.html" class="botao botao-secundario">Sign in</a>
-                </form>
-            </div>
-</section>
-
-<section class="container-cadastro">
-    <div class="conteudo-cadastro">
-            <!-- Primeira Coluna (Cadastro) -->
-            <div class="coluna coluna-esquerda">
-                <h2 class="titulo titulo-primario">Seja Uma Empresa Parceira!</h2>
-                <p class="descricao descricao-primaria">
-                    Apoie a diversidade e encontre talentos incríveis
-                </p>
-                <p class="descricao descricao-primaria">Junte-se a nós na construção de um futuro mais inclusivo</p>
-                <button id="signin" class="botao botao-primario">
-                    ALUNAS CLICAR AQUI
-                </button>
-            </div>
-            <!-- cadastro empresas -->
-            <div class="coluna coluna-direita">
-                <h2 class="titulo titulo-secundario"> 🤝 Login para parceiros 🤝</h2>
-                <div class="redes-sociais">
-                    <ul class="lista-redes-sociais">
-                        <li class="item-rede-social">
-                            <i class="fab fa-facebook-f"></i>
-                        </li>
-                        <li class="item-rede-social">
-                            <i class="fab fa-google"></i>
-                        </li>
-                        <li class="item-rede-social">
-                            <i class="fab fa-linkedin-in"></i>
-                        </li>
-                    </ul>
-                </div>
-                
-                <p class="descricao descricao-secundaria">
-                    ou use seu e-mail para login:
-                </p>
-                
-                <form class="formulario">
-                    <!-- <div class="grupo-input">
-                        <i class="fas fa-user icone-input"></i>
-                        <input type="text" class="campo-input" placeholder="Nome" required>
-                    </div> -->
-                    
-                    <div class="grupo-input">
-                        <i class="fas fa-envelope icone-input"></i>
-                        <input type="email" class="campo-input" placeholder="E-mail" required>
-                    </div>
-                    
-                    <div class="grupo-input">
-                        <i class="fas fa-lock icone-input"></i>
-                        <input type="password" class="campo-input" placeholder="Senha" required>
-                    </div>
-                    
-                    <!-- <button type="submit" class="botao botao-secundario">Cadastrar</button> -->
-                    <a href="../vagas.html" class="botao botao-secundario">Sign in</a>
-                </form>
-            </div>
+  <body>
+    <!-- 1° TELA -->
+    <div class="container">
+      <div class="content first-content">
+        <div class="first-column">
+          <h2 class="title title-primary">Sua Jornada Tech Começa Aqui!</h2>
+          <p class="description description-primary">
+            Conecte-se com oportunidades exclusivas e mentorias
+          </p>
+          <p class="description description-primary">
+            TORNE-SE TECNOLÓGICA
+          </p>
+          <button id="signin" class="btn btn-primary">EMPRESAS CLICAR AQUI</button>
         </div>
-    </div>
-</section>
+        <div class="second-column">
+          <h2 class="title title-second">👩‍🎓 Login Alunas 👨‍💻</h2>
+          <div class="social-media">
+            <ul class="list-social-media">
+              <a class="link-social-media" href="#">
+                <li class="item-social-media">
+                  <i class="fab fa-facebook-f"></i>
+                </li>
+              </a>
+              <a class="link-social-media" href="#">
+                <li class="item-social-media">
+                  <i class="fab fa-google-plus-g"></i>
+                </li>
+              </a>
+              <a class="link-social-media" href="#">
+                <li class="item-social-media">
+                  <i class="fab fa-linkedin-in"></i>
+                </li>
+              </a>
+            </ul>
+          </div>
+          <!-- social media -->
+          <p class="description description-second">
+            ou use seu e-mail para login:
+          </p>
+          <form class="form">
+            <!-- <label class="label-input" for="">
+              <i class="far fa-user icon-modify"></i>
+              <input type="text" placeholder="Name" />
+            </label> -->
 
-    <footer class="rodape">
-          <p>&copy; 2025 Mulheres na Tecnologia &middot; <a href="#">Privacidade</a> &middot; <a href="#">Termos</a></p> 
-          <p class="voltar-topo"><a href="#"><i class="bi bi-arrow-up-circle">Topo</i></a></p>
-        </footer>
+            <label class="label-input" for="">
+              <i class="far fa-envelope icon-modify"></i>
+              <input type="email" placeholder="Email" required/>
+            </label>
+
+            <label class="label-input" for="">
+              <i class="fas fa-lock icon-modify"></i>
+              <input type="password" placeholder="Password" required/>
+            </label>
+
+            <!-- <button class="btn btn-second">sign up</button> -->
+             <a href="../curriculo.html" class="btn btn-second">Sign in</a>
+          </form>
+        </div>
+        <!-- second column -->
+      </div>
+      
+      <!-- first content -->
+      <div class="content second-content">
+        <div class="first-column">
+          <h2 class="title title-primary">Seja Uma Empresa Parceira!</h2>
+          <p class="description description-primary">
+            Apoie a diversidade e encontre talentos incríveis
+          </p>
+          <p class="description description-primary">
+            Junte-se a nós na construção de um futuro mais inclusivo
+          </p>
+          <button id="signup" class="btn btn-primary">ALUNAS CLICAR AQUI</button>
+        </div>
+        <div class="second-column">
+          <h2 class="title title-second">🤝 Login Parceiros🤝</h2>
+          <div class="social-media">
+            <ul class="list-social-media">
+              <a class="link-social-media" href="#">
+                <li class="item-social-media">
+                  <i class="fab fa-facebook-f"></i>
+                </li>
+              </a>
+              <a class="link-social-media" href="#">
+                <li class="item-social-media">
+                  <i class="fab fa-google-plus-g"></i>
+                </li>
+              </a>
+              <a class="link-social-media" href="#">
+                <li class="item-social-media">
+                  <i class="fab fa-linkedin-in"></i>
+                </li>
+              </a>
+            </ul>
+          </div>
+          <!-- social media -->
+          <p class="description description-second">
+            ou use seu e-mail para login:
+          </p>
+          <form class="form">
+            <label class="label-input" for="">
+              <i class="far fa-envelope icon-modify"></i>
+              <input type="email" placeholder="Email" />
+            </label>
+
+            <label class="label-input" for="">
+              <i class="fas fa-lock icon-modify"></i>
+              <input type="password" placeholder="Password" />
+            </label>
+
+            <a class="password" href="#">forgot your password?</a>
+            <!-- <button class="btn btn-second">sign in</button> -->
+             <a href="../vagas.html" class="btn btn-second">Sign in</a>
+          </form>
+        </div>
+        <!-- second column -->
+      </div>
+      <!-- second-content -->
+    </div>
+
+    <!-- Footer -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Links</h3>
+      <div class="footer-links">
+        <a href="#">Sobre Nós</a>
+        <a href="#">Nossas Iniciativas</a>
+        <a href="#">Eventos</a>
+        <a href="#">Blog</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    
+    <div class="footer-section">
+      <h3>Recursos</h3>
+      <div class="footer-links">
+        <a href="#">Materiais Gratuitos</a>
+        <a href="#">Guia de Carreiras</a>
+        <a href="#">Vagas Exclusivas</a>
+        <a href="#">Perguntas Frequentes</a>
+      </div>
+    </div>
+    
+    <div class="footer-section">
+      <h3>Newsletter</h3>
+      <p>Receba oportunidades e conteúdos exclusivos no seu e-mail.</p>
+      <div class="newsletter">
+        <input type="email" placeholder="Seu e-mail">
+        <button class="btn-rosa">Assinar</button>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2025 Mulheres na Tecnologia. Todos os direitos reservados.</p>
+      <p>Desenvolvido por: SQUAD 52 - RECOD PRO AI</p>
+      <div>
+        <a href="#">Termos de Uso</a> | 
+        <a href="#">Política de Privacidade</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <!-- Toca de Login -->
-    <script src="./js/app.js"></script>
+    <script src="js/app.js"></script>
 
     <!-- Script para Dark Mode -->
     <script src="./js/darkmode.js"></script>
-</body>
+    
+  </body>
 </html>

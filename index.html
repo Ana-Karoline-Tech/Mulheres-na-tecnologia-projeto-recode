@@ -219,8 +219,84 @@
                     <a href="./frontend/sobre.html" class="btn btn-rosa mt-3">Veja nossa pesquisa completa</a>
                 </div>
                 <div class="col-lg-6">
-                    <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Mulheres na tecnologia" class="img-fluid rounded-3 shadow">
+                    <img src="./frontend/assets/mulheres-na-tech.jpg" alt="Mulheres na tecnologia" class="img-fluid rounded-3 shadow">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Legislação -->
+    <section class="destaque-section py-5" id="legislacao">
+        <div class="container">
+            <h2 class="text-center mb-5 title-gradient">Incentivos Fiscais para Contratação de Mulheres</h2>
+            
+            <div class="row align-items-center">
+            <!-- Vídeo (lado esquerdo) -->
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="embed-responsive embed-responsive-16by9 rounded shadow-lg">                 
+                    <div class="video-container my-5 rounded-3 shadow-lg">
+                    <!-- Use IFRAME para vídeos do YouTube -->
+                    <iframe 
+                        class="embed-responsive-item w-100" 
+                        src="https://www.youtube.com/embed/qZI3mxA6gyY" 
+                        title="Mulheres em Tech Cast" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        style="min-height: 400px; border-radius: 12px;"
+                    ></iframe>
+            </div>
+
+                </div>
+        </div>
+            
+            <!-- Resumo Legislativo (lado direito) -->
+            <div class="col-lg-6">
+                <div class="legislacao-card p-4 rounded" style="background: rgba(255,255,255,0.9); border-left: 5px solid var(--rosa-medio);">
+                <h4 class="mb-4" style="color: var(--rosa-escuro);">Resumo da Legislação</h4>
+                
+                <ul class="list-unstyled">
+                    <li class="mb-3 d-flex">
+                    <i class="bi bi-file-earmark-text me-3" style="color: var(--rosa-medio); font-size: 1.5rem;"></i>
+                    <div>
+                        <h5 style="color: var(--azul-escuro);">Lei de Cotas (8.213/91)</h5>
+                        <p>Empresas com 100+ funcionários devem incluir mulheres com deficiência (2%-5% dos cargos).</p>
+                    </div>
+                    </li>
+                    
+                    <li class="mb-3 d-flex">
+                    <i class="bi bi-cash-coin me-3" style="color: var(--rosa-medio); font-size: 1.5rem;"></i>
+                    <div>
+                        <h5 style="color: var(--azul-escuro);">Simples Nacional</h5>
+                        <p>Redução tributária indireta ao facilitar políticas de diversidade.</p>
+                    </div>
+                    </li>
+                    
+                    <li class="mb-3 d-flex">
+                    <i class="bi bi-building me-3" style="color: var(--rosa-medio); font-size: 1.5rem;"></i>
+                    <div>
+                        <h5 style="color: var(--azul-escuro);">Incentivos Locais</h5>
+                        <p>Alguns estados oferecem descontos em ISS/ICMS para empresas com equidade de gênero.</p>
+                    </div>
+                    </li>
+                </ul>
+                
+                <div class="mt-4 p-3 rounded" style="background: var(--rosa-claro);">
+                    <h6 class="fw-bold" style="color: var(--rosa-escuro);">Benefícios Adicionais:</h6>
+                    <p class="benef-add mb-0">Empresas com políticas de gênero podem ter preferência em licitações públicas e acesso a selos de diversidade.</p>
+                </div>
+                </div>
+            </div>
+            </div>
+            
+            <!-- CTA -->
+            <div class="text-center mt-5">
+            <a href="#contato" class="btn btn-rosa btn-lg me-3">
+                <i class="bi bi-envelope-fill me-2"></i>Quero saber mais
+            </a>
+            <a href="legislacao-completa.pdf" class="btn btn-outline-rosa btn-lg">
+                <i class="bi bi-file-pdf-fill me-2"></i>Baixe o guia completo
+            </a>
             </div>
         </div>
     </section>
@@ -284,6 +360,7 @@
                 <p class="lead text-center">Veja o que nossas participantes estão dizendo</p>
             </div>
             
+            <!-- Testemunho 1 -->
             <div class="row">
                 <div class="col-md-6">
                     <div class="testimonial-card">
@@ -298,6 +375,7 @@
                     </div>
                 </div>
                 
+                <!-- Testemunho 2 -->
                 <div class="col-md-6">
                     <div class="testimonial-card">
                         <p class="mb-4">"Os workshops me deram as habilidades práticas que faltavam no meu currículo. Hoje lidero uma equipe de engenharia de dados e incentivo outras mulheres a seguirem esse caminho."</p>
@@ -311,85 +389,90 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 d-none testimonial-extra">
+                <!-- Testemunho 3 -->
+                <div class="col-md-6 mb-4 testimonial-extra">
                     <div class="testimonial-card">
-                        <p class="mb-4">"Os workshops me deram as habilidades práticas que faltavam no meu currículo. Hoje lidero uma equipe de engenharia de dados e incentivo outras mulheres a seguirem esse caminho."</p>
+                        <p class="mb-4">"Aos 45 anos, pensei que era tarde para migrar para TI. O programa de capacitação para mulheres maduras me mostrou que experiência é um diferencial!"</p>
                         <div class="d-flex align-items-center">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ana" class="rounded-circle me-3" width="60">
+                        <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="Patrícia" class="rounded-circle me-3" width="60">
+                        <div>
+                            <h5 class="mb-1">Patrícia Nunes</h5>
+                            <p class="text-muted mb-0">Analista de Segurança da Informação</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>         
+
+                    <!-- Testemunho 4 -->
+                    <div class="col-md-6 mb-4 testimonial-extra">
+                    <div class="testimonial-card">
+                        <p class="mb-4">"Como mãe solo, pensei que nunca entraria na TI. As mentorias me mostraram que é possível conciliar tudo. Hoje sou Dev Front-End e inspiro minha filha!"</p>
+                        <div class="d-flex align-items-center">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Juliana" class="rounded-circle me-3" width="60">
+                        <div>
+                            <h5 class="mb-1">Juliana Santos</h5>
+                            <p class="text-muted mb-0">Desenvolvedora Front-End Sênior</p>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Testemunho 5 -->
+                    <div class="col-md-6 mb-4 testimonial-extra">
+                    <div class="testimonial-card">
+                        <p class="mb-4">"Migrei da enfermagem para a Ciência de Dados graças ao bootcamp. A rede de apoio entre mulheres foi crucial para minha recolocação em 3 meses."</p>
+                        <div class="d-flex align-items-center">
+                        <img src="https://randomuser.me/api/portraits/women/76.jpg" alt="Fernanda" class="rounded-circle me-3" width="60">
+                        <div>
+                            <h5 class="mb-1">Fernanda Oliveira</h5>
+                            <p class="text-muted mb-0">Cientista de Dados na Saúde</p>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Testemunho 6 -->
+                     <div class="col-md-6 mb-4 testimonial-extra">
+                    <div class="testimonial-card">
+                        <p class="mb-4">"O curso de Cloud Computing mudou minha carreira! Em 6 meses, consegui minha primeira certificação AWS e hoje trabalho remoto para uma empresa global."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Camila" class="rounded-circle me-3" width="60">
                             <div>
-                                <h5 class="mb-1">Ana Paula Rocha</h5>
-                                <p class="text-muted mb-0">Líder de Engenharia de Dados</p>
+                                <h5 class="mb-1">Camila Silva</h5>
+                                <p class="text-muted mb-0">Arquiteta de Soluções em Cloud</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 d-none testimonial-extra">
+                    <!-- Testemunho 7 -->
+                    <div class="col-md-6 mb-4 testimonial-extra">
                     <div class="testimonial-card">
-                        <p class="mb-4">"Os workshops me deram as habilidades práticas que faltavam no meu currículo. Hoje lidero uma equipe de engenharia de dados e incentivo outras mulheres a seguirem esse caminho."</p>
+                        <p class="mb-4">"Como mulher trans na tecnologia, encontrei no curso um espaço seguro para aprender. Hoje sou Dev Back-End e atuo como mentora para outras LGBTQIA+."</p>
                         <div class="d-flex align-items-center">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ana" class="rounded-circle me-3" width="60">
-                            <div>
-                                <h5 class="mb-1">Ana Paula Rocha</h5>
-                                <p class="text-muted mb-0">Líder de Engenharia de Dados</p>
-                            </div>
+                        <img src="https://randomuser.me/api/portraits/women/81.jpg" alt="Larissa" class="rounded-circle me-3" width="60">
+                        <div>
+                            <h5 class="mb-1">Larissa Almeida</h5>
+                            <p class="text-muted mb-0">Desenvolvedora Back-End | Mentora</p>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                <!-- Testemunho 8 -->
+                <div class="col-md-6 mb-4 testimonial-extra">
+                    <div class="testimonial-card">
+                        <p class="mb-4">"Depois de 10 anos como professora, o curso de UX Design me deu uma nova perspectiva. Hoje crio interfaces acessíveis que melhoram a educação digital."</p>
+                        <div class="d-flex align-items-center">
+                        <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Beatriz" class="rounded-circle me-3" width="60">
+                        <div>
+                            <h5 class="mb-1">Beatriz Costa</h5>
+                            <p class="text-muted mb-0">UX Designer Especialista em Educação</p>
+                        </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 d-none testimonial-extra"> 
-                    <div class="testimonial-card">
-                        <p class="mb-4">"Os workshops me deram as habilidades práticas que faltavam no meu currículo. Hoje lidero uma equipe de engenharia de dados e incentivo outras mulheres a seguirem esse caminho."</p>
-                        <div class="d-flex align-items-center">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ana" class="rounded-circle me-3" width="60">
-                            <div>
-                                <h5 class="mb-1">Ana Paula Rocha</h5>
-                                <p class="text-muted mb-0">Líder de Engenharia de Dados</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 d-none testimonial-extra">
-                    <div class="testimonial-card">
-                        <p class="mb-4">"Os workshops me deram as habilidades práticas que faltavam no meu currículo. Hoje lidero uma equipe de engenharia de dados e incentivo outras mulheres a seguirem esse caminho."</p>
-                        <div class="d-flex align-items-center">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ana" class="rounded-circle me-3" width="60">
-                            <div>
-                                <h5 class="mb-1">Ana Paula Rocha</h5>
-                                <p class="text-muted mb-0">Líder de Engenharia de Dados</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 d-none testimonial-extra">
-                    <div class="testimonial-card">
-                        <p class="mb-4">"Os workshops me deram as habilidades práticas que faltavam no meu currículo. Hoje lidero uma equipe de engenharia de dados e incentivo outras mulheres a seguirem esse caminho."</p>
-                        <div class="d-flex align-items-center">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ana" class="rounded-circle me-3" width="60">
-                            <div>
-                                <h5 class="mb-1">Ana Paula Rocha</h5>
-                                <p class="text-muted mb-0">Líder de Engenharia de Dados</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 d-none testimonial-extra">
-                    <div class="testimonial-card">
-                        <p class="mb-4">"Os workshops me deram as habilidades práticas que faltavam no meu currículo. Hoje lidero uma equipe de engenharia de dados e incentivo outras mulheres a seguirem esse caminho."</p>
-                        <div class="d-flex align-items-center">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ana" class="rounded-circle me-3" width="60">
-                            <div>
-                                <h5 class="mb-1">Ana Paula Rocha</h5>
-                                <p class="text-muted mb-0">Líder de Engenharia de Dados</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
             <div class="text-center mt-4">
                 <a href="#" class="btn btn-rosa" id="btn-testimonials">Veja mais histórias de sucesso</a>
             </div>

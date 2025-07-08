@@ -84,6 +84,10 @@
   position: relative;
 }
 
+.dark-mode .benef-add {
+  color: #7869ff !important !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -211,8 +215,6 @@ html {
 }
 
 /* Efeito de digitação para o subtítulo */
-
-
         .typing-effect {
         display: inline-block;
         border-right: 2px solid #ff69b4;
@@ -227,17 +229,17 @@ html {
           50% { border-color: #ff69b4 }
 }      
 
-.typing-cursor {
-  display: inline-block;
-  border-right: 2px solid #ff69b4;
-  animation: blink-caret 0.75s step-end infinite;
-  vertical-align: middle;
-  height: 1.2em; /* Ajuste conforme necessário */
-}
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #ff69b4 }
-}
+        .typing-cursor {
+          display: inline-block;
+          border-right: 2px solid #ff69b4;
+          animation: blink-caret 0.75s step-end infinite;
+          vertical-align: middle;
+          height: 1.2em; /* Ajuste conforme necessário */
+        }
+        @keyframes blink-caret {
+          from, to { border-color: transparent }
+          50% { border-color: #ff69b4 }
+        }
         
         /* Cards de Estatísticas */
         .stat-card {
@@ -426,7 +428,37 @@ html {
         .dark-mode .testimonial-card::before {
             color: var(--dourado);
         }
+        
+        /* Estilo personalizado */
+        .video-container {
+          border: 3px solid var(--rosa-medio);
+          background: var(--azul-escuro);
+        }
+        /* Modo Escuro para a seção */
+        .tema-escuro .legislacao-card {
+          background: rgba(26, 26, 46, 0.9) !important;
+          border-left-color: var(--dourado) !important;
+        }
 
+        .tema-escuro .legislacao-card h4,
+        .tema-escuro .legislacao-card h5 {
+          color: var(--dourado) !important;
+        }
+
+        .tema-escuro .legislacao-card p {
+          color: var(--texto-escuro);
+        }
+
+        .tema-escuro .legislacao-card .bi {
+          color: var(--dourado) !important;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+          .legislacao-card {
+            margin-top: 2rem;
+          }
+        }
 /* Navbar */
 .navbar-rosa {
   background-color: #ff69b4 !important; /* Rosa médio */

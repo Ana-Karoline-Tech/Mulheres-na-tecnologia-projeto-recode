@@ -112,63 +112,113 @@ body {
   margin-left: 5px;
 }
 
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--rosa-claro);
+            color: var(--texto-claro);
+            transition: all 0.3s;
+        }
 
-/* Estilos para a tela de pré-cadastro */
-.btn-rosa-outline {
-    border: 2px solid var(--rosa-medio);
-    color: var(--rosa-medio);
-    background-color: transparent;
-    transition: all 0.3s;
-}
+        .tema-escuro {
+            background-color: var(--azul-escuro);
+            color: var(--texto-escuro);
+        }
 
-.btn-rosa-outline:hover {
-    background-color: var(--rosa-medio);
-    color: white;
-}
+        /* Header Styles */
+        .hero-section {
+            background: linear-gradient(135deg, var(--rosa-medio) 0%, var(--azul-medio) 100%);
+            padding: 4rem 0;
+            color: white;
+            margin-bottom: 3rem;
+        }
 
-.btn-dourado {
-    background-color: var(--dourado);
-    color: var(--azul-escuro);
-    font-weight: 600;
-    border: none;
-    transition: all 0.3s;
-}
+        /* Card Styles */
+        .card-mentoria {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s;
+            margin-bottom: 2rem;
+            background: white;
+            box-shadow: 0 5px 15px rgba(214, 54, 138, 0.1);
+        }
 
-.btn-dourado:hover {
-    background-color: #e6c200;
-    transform: translateY(-2px);
-}
+        .tema-escuro .card-mentoria {
+            background: rgba(26, 26, 46, 0.8);
+            box-shadow: 0 5px 15px rgba(70, 130, 180, 0.2);
+        }
 
-.bg-rosa {
-    background-color: var(--rosa-medio);
-}
+        .card-mentoria:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(214, 54, 138, 0.2);
+        }
 
-.bg-dourado {
-    background-color: var(--dourado);
-}
+        .text-rosa {
+            color: var(--rosa-medio);
+        }
 
-/* Dark Mode */
-.tema-escuro .card[style*="--rosa-claro"] {
-    background-color: var(--azul-escuro) !important;
-    color: var(--texto-escuro);
-}
+        .tema-escuro .text-rosa {
+            color: var(--dourado);
+        }
 
-.tema-escuro .btn-rosa-outline {
-    border-color: var(--dourado);
-    color: var(--dourado);
-}
+        .bg-rosa {
+            background-color: var(--rosa-medio);
+        }
 
-.tema-escuro .btn-rosa-outline:hover {
-    background-color: var(--dourado);
-    color: var(--azul-escuro);
-}
+        .btn-rosa {
+            background-color: var(--rosa-medio);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
 
-.tema-escuro .card[style*="--azul-medio"] {
-    background-color: #2a4e6c !important;
-}
+        .btn-rosa:hover {
+            background-color: var(--rosa-escuro);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Filter Section */
+        .filter-section {
+            background-color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 3px 10px rgba(214, 54, 138, 0.1);
+        }
+
+        .tema-escuro .filter-section {
+            background-color: rgba(26, 26, 46, 0.8);
+            box-shadow: 0 3px 10px rgba(70, 130, 180, 0.2);
+        }
+
+        /* Event List */
+        .event-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .event-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(214, 54, 138, 0.1);
+        }
+
+        .tema-escuro .event-list li {
+            border-bottom: 1px solid rgba(70, 130, 180, 0.2);
+        }
+
+        /* Load More Button */
+        .load-more {
+            margin-top: 3rem;
+            text-align: center;
+        }
 
 
-/* ========== RODAPÉ ========== */
+
+        /* ========== RODAPÉ ========== */
 footer {
             background: linear-gradient(to right, var(--azul-escuro), var(--azul-medio));
             color: white;
@@ -204,54 +254,3 @@ footer {
       .btn-rosa:hover {
         background-color: var(--rosa-escuro) !important;
       }
-        
-/* ========== DARK MODE ========== */
-        body.tema-escuro {
-        background-color: var(--azul-escuro);
-        color: var(--texto-escuro);
-     }
-
-        .tema-escuro .secao-parceiros {
-        background-color: #4a1e5a;
-        }
-
-        .tema-escuro .card-curso {
-        background-color: #16213e;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .tema-escuro .card-title {
-        color: var(--dourado);
-        }
-
-        .tema-escuro .card-text {
-        color: var(--texto-escuro);
-        }
-
-        .tema-escuro .card-img-top {
-        background-color: #2a3a5a;
-        }
-
-        .tema-escuro .secao-apresentacao {
-            background-color: #4a1e5a;
-            color: var(--texto-escuro);
-        }
-
-        /* ========== RESPONSIVIDADE ========== */
-        @media (max-width: 768px) {
-        .secao-parceiros h2 {
-            font-size: 1.5rem;
-        }
-        
-        .secao-parceiros p {
-            font-size: 1rem;
-        }
-        
-        .card-title {
-            font-size: 1.1rem;
-        }
-        
-        .card-text {
-            font-size: 0.9rem;
-        }
-        }

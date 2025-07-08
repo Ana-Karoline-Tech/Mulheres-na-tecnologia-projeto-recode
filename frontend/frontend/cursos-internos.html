@@ -1,0 +1,573 @@
+
+<!DOCTYPE html>
+<html lang="pt-br" data-tema="claro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentorias & Cursos | Mulheres na Tecnologia</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="cursos-internos.css">
+    
+</head>
+<body class="tema-claro">
+    <!-- Navigation (same as your template) -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-rosa">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../assets/logo (2).jpg" alt="Logo" class="logo-navbar">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../index.html"><i class="bi bi-house-heart-fill"></i> Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre.html"><i class="bi bi-bookmark-heart-fill"></i> Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contato.html"><i class="bi bi-bookmark-heart-fill"></i> Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="cursos.html"><i class="bi bi-bookmark-heart-fill"></i> Cursos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="artigos.html"><i class="bi bi-bookmark-heart-fill"></i> Artigos</a> 
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./cadastro/cadastro.html"><i class="bi bi-bookmark-heart-fill"></i>Login</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Theme Toggle -->
+                    <div class="alternador-tema">
+                        <input type="checkbox" id="alternador" class="checkbox-alternador">
+                        <label for="alternador" class="rotulo-alternador">
+                            <i class="bi bi-sun"></i>
+                            <i class="bi bi-moon"></i>
+                            <span class="bola-alternador"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="fw-bold mb-3">Mentorias & Cursos</h1>
+            <p class="lead mb-4">Conecte-se com especialistas e aprimore suas habilidades</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#" class="btn btn-light btn-lg">Encontrar Mentorias</a>
+                <a href="#" class="btn btn-outline-light btn-lg">Explorar Cursos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="row">
+            <!-- Left Column - Filters -->
+            <div class="col-lg-4">
+                <div class="filter-section sticky-top" style="top: 20px;">
+                    <h3 class="fw-bold mb-4">Filtrar</h3>
+                    
+                    <div class="mb-4">
+                        <h5 class="fw-bold mb-3">Tipo</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="mentorias" checked>
+                            <label class="form-check-label" for="mentorias">
+                                Mentorias
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="cursos" checked>
+                            <label class="form-check-label" for="cursos">
+                                Cursos
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="workshops" checked>
+                            <label class="form-check-label" for="workshops">
+                                Workshops
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5 class="fw-bold mb-3">Formato</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="online" checked>
+                            <label class="form-check-label" for="online">
+                                Online
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="presencial">
+                            <label class="form-check-label" for="presencial">
+                                Presencial
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5 class="fw-bold mb-3">Área de Interesse</h5>
+                        <select class="form-select">
+                            <option selected>Todas as áreas</option>
+                            <option>Front-end</option>
+                            <option>Back-end</option>
+                            <option>Ciência de Dados</option>
+                            <option>UX/UI Design</option>
+                            <option>Inteligência Artificial</option>
+                        </select>
+                    </div>
+                    
+                    <h5 class="fw-bold mb-3">Próximos Eventos</h5>
+                    <ul class="event-list">
+                        <li>
+                            <strong>Workshop: Python para Iniciantes</strong>
+                            <div class="d-flex align-items-center mt-1 text-muted">
+                                <i class="bi bi-calendar-event me-2"></i>
+                                <span class="me-3">15/05</span>
+                                <i class="bi bi-clock me-2"></i>
+                                <span>19h - 21h</span>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Mentoria: Carreira em Dados</strong>
+                            <div class="d-flex align-items-center mt-1 text-muted">
+                                <i class="bi bi-calendar-event me-2"></i>
+                                <span class="me-3">20/05</span>
+                                <i class="bi bi-clock me-2"></i>
+                                <span>16h - 18h</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Right Column - Mentorias/Cursos -->
+            <div class="col-lg-8">
+                <div class="row"  id="mentorias-container">
+                    <!-- Palestrante 1 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card-mentoria h-100 border-0 shadow-sm d-flex flex-row">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../assets/palestrantes/eu-1.png" class="img-fluid rounded-start h-100" alt="Ana Karoline Ribeiro" style="object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div>
+                                                <h3 class="card-title mb-1">Ana Karoline Ribeiro</h3>
+                                                <p class="text-muted small">Engenheira de Software | Especialista em IA Inclusiva</p>
+                                            </div>
+                                            <span class="badge bg-rosa text-white">Online</span>
+                                        </div>
+                                        <h5 class="mt-3 text-rosa">"Como a IA pode reduzir vieses de gênero na tecnologia"</h5>
+                                        <div class="d-flex align-items-center mt-3 text-muted">
+                                            <i class="bi bi-calendar-event me-2"></i>
+                                            <span class="me-3">25/10/2025</span>
+                                            <i class="bi bi-clock me-2"></i>
+                                            <span>19h - 21h</span>
+                                        </div>
+                                        <p class="card-text mt-3">Nesta palestra, Ana compartilhará cases reais de algoritmos inclusivos e como mulheres podem liderar projetos de IA ética.</p>
+                                        <a href="#" class="btn btn-rosa mt-2">Inscreva-se Gratuitamente</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Palestrante 2 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card-mentoria h-100 border-0 shadow-sm d-flex flex-row">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../assets/palestrantes/Eliane_Lunguinho.png" class="img-fluid rounded-start h-100" alt="Eliane Lunguinho" style="object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div>
+                                                <h3 class="card-title mb-1">Eliane Lunguinho</h3>
+                                                <p class="text-muted small">Head de Design | Especialista em Acessibilidade</p>
+                                            </div>
+                                            <span class="badge bg-rosa text-white">Presencial - PE</span>
+                                        </div>
+                                        <h5 class="mt-3 text-rosa">"Design Centrado no Usuário: Criando para TODAS"</h5>
+                                        <div class="d-flex align-items-center mt-3 text-muted">
+                                            <i class="bi bi-calendar-event me-2"></i>
+                                            <span class="me-3">28/10/2025</span>
+                                            <i class="bi bi-clock me-2"></i>
+                                            <span>16h - 18h</span>
+                                        </div>
+                                        <p class="card-text mt-3">Eliane abordará a importância da diversidade no design de aplicativos e ferramentas digitais que consideram todas as usuárias.</p>
+                                        <a href="#" class="btn btn-rosa mt-2">Inscreva-se Gratuitamente</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Palestrante 3 -->
+                    <div class="col-md-6 mb-4 extra-mentoria d-none">
+                        <div class="card-mentoria h-100 border-0 shadow-sm d-flex flex-row">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../assets/palestrantes/isabela_brandao.png" class="img-fluid rounded-start h-100" alt="Ana Karoline Ribeiro" style="object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div>
+                                                <h3 class="card-title mb-1">Isabela Albuquerque</h3>
+                                                <p class="text-muted small">CTO da TechForGood | Especialista em Carreira Não-Linear</p>
+                                            </div>
+                                            <span class="badge bg-rosa text-white">Presencial - SP</span>
+                                        </div>
+                                        <h5 class="mt-3 text-rosa">"Transição de carreira: Da biologia à programação"</h5>
+                                        <div class="d-flex align-items-center mt-3 text-muted">
+                                            <i class="bi bi-calendar-event me-2"></i>
+                                            <span class="me-3">02/11/25</span>
+                                            <i class="bi bi-clock me-2"></i>
+                                            <span>19h - 21h</span>
+                                        </div>
+                                        <p class="card-text mt-3">Isabela Albuquerque compartilhará sua jornada de transição de carreira e métodos eficazes para mulheres que desejam ingressar na área de tecnologia, mesmo sem experiência prévia.</p>
+                                        <a href="#" class="btn btn-rosa mt-2">Inscreva-se Gratuitamente</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Palestrante 4 -->
+                    <div class="col-md-6 mb-4 extra-mentoria d-none">
+                        <div class="card-mentoria h-100 border-0 shadow-sm d-flex flex-row">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../assets/palestrantes/Diego.png" class="img-fluid rounded-start h-100" alt="Eliane Lunguinho" style="object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div>
+                                                <h3 class="card-title mb-1">Diego Cutrim</h3>
+                                                <br>
+                                                <p class="text-muted small">Líder de Diversidade na Microsoft Brasil | Ally da Inclusão</p>
+                                            </div>
+                                            <span class="badge bg-rosa text-white">Online</span>
+                                        </div>
+                                        <h5 class="mt-3 text-rosa">"Homens aliados: Como construir equipes diversas"</h5>
+                                        <div class="d-flex align-items-center mt-3 text-muted">
+                                            <i class="bi bi-calendar-event me-2"></i>
+                                            <span class="me-3">28/10/2025</span>
+                                            <i class="bi bi-clock me-2"></i>
+                                            <span>16h - 18h</span>
+                                        </div>
+                                        <p class="card-text mt-3">Diego Cutrim abordará estratégias práticas para que homens possam atuar como aliados na construção de equipes tecnológicas mais diversas e inclusivas.</p>
+                                        <a href="#" class="btn btn-rosa mt-2">Inscreva-se Gratuitamente</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Palestrante 5 -->
+                    <div class="col-md-6 mb-4 extra-mentoria d-none">
+                        <div class="card-mentoria h-100 border-0 shadow-sm d-flex flex-row">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../assets/palestrantes/eu-001.png" class="img-fluid rounded-start h-100" alt="Ana Karoline Ribeiro" style="object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div>
+                                                <h3 class="card-title mb-1">Ana Karoline Ribeiro</h3>
+                                                <p class="text-muted small">Engenheira de Software | Especialista em IA Inclusiva</p>
+                                            </div>
+                                            <span class="badge bg-rosa text-white">Online</span>
+                                        </div>
+                                        <h5 class="mt-3 text-rosa">"Web Scraping Moderno: Coleta de Dados para Igualdade"</h5>
+                                        <div class="d-flex align-items-center mt-3 text-muted">
+                                            <i class="bi bi-calendar-event me-2"></i>
+                                            <span class="me-3">25/10/2025</span>
+                                            <i class="bi bi-clock me-2"></i>
+                                            <span>19h - 21h</span>
+                                        </div>
+                                        <p class="card-text mt-3">Workshop prático com técnicas atualizadas de raspagem de dados para análise de disparidades de gênero no setor tech.
+Evento online com certificado de participação</p>
+                                        <a href="#" class="btn btn-rosa mt-2">Inscreva-se Gratuitamente</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Palestrante 6 -->
+                    <div class="col-md-6 mb-4 extra-mentoria d-none">
+                        <div class="card-mentoria h-100 border-0 shadow-sm d-flex flex-row">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../assets/palestrantes/isabela_brandao001.jpeg" class="img-fluid rounded-start h-100" alt="Eliane Lunguinho" style="object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div>
+                                                <h3 class="card-title mb-1">Isabela Albuquerque</h3>
+                                                <p class="text-muted small">CTO da TechForGood | Especialista em Carreira Não-Linear</p>
+                                            </div>
+                                            <span class="badge bg-rosa text-white">Presencial - SP</span>
+                                        </div>
+                                        <h5 class="mt-3 text-rosa">"Da Medicina ao Código: Migração de Carreira em 1 Ano"</h5>
+                                        <div class="d-flex align-items-center mt-3 text-muted">
+                                            <i class="bi bi-calendar-event me-2"></i>
+                                            <span class="me-3">02/11/2025</span>
+                                            <i class="bi bi-clock me-2"></i>
+                                            <span>16h - 18h</span>
+                                        </div>
+                                        <p class="card-text mt-3">Isabela revelará seu método passo-a-passo para transicionar para TI, com dicas práticas de portfólio, networking e primeiras vagas na área.</p>
+                                        <a href="#" class="btn btn-rosa mt-2">Inscreva-se Gratuitamente</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Palestrante 7 -->
+                    <div class="col-md-6 mb-4 extra-mentoria d-none">
+                        <div class="card-mentoria h-100 border-0 shadow-sm d-flex flex-row">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../assets/palestrantes/eu-002.png" class="img-fluid rounded-start h-100" alt="Ana Karoline Ribeiro" style="object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div>
+                                                <h3 class="card-title mb-1">Ana Karoline Ribeiro</h3>
+                                                <p class="text-muted small">Engenheira de Software | Especialista em IA Inclusiva</p>
+                                            </div>
+                                            <span class="badge bg-rosa text-white">Online</span>
+                                        </div>
+                                        <h5 class="mt-3 text-rosa">"Inteligência Artificial Ética: Eliminando Vieses de Gênero"</h5>
+                                        <div class="d-flex align-items-center mt-3 text-muted">
+                                            <i class="bi bi-calendar-event me-2"></i>
+                                            <span class="me-3">25/10/2025</span>
+                                            <i class="bi bi-clock me-2"></i>
+                                            <span>19h - 21h</span>
+                                        </div>
+                                        <p class="card-text mt-3">Nesta palestra, Ana mostrará como identificar e corrigir vieses em algoritmos, com casos reais de sistemas discriminatórios e suas soluções.</p>
+                                        <a href="#" class="btn btn-rosa mt-2">Inscreva-se Gratuitamente</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Palestrante 8 -->
+                    <div class="col-md-6 mb-4 extra-mentoria d-none">
+                        <div class="card-mentoria h-100 border-0 shadow-sm d-flex flex-row">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../assets/palestrantes/Diego001.jpeg" class="img-fluid rounded-start h-100" alt="Eliane Lunguinho" style="object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div>
+                                                <h3 class="card-title mb-1">Diego Cutrim</h3>
+                                                <p class="text-muted small">Head de Design | Especialista em Acessibilidade</p>
+                                            </div>
+                                            <span class="badge bg-rosa text-white">Presencial - PE</span>
+                                        </div>
+                                        <h5 class="mt-3 text-rosa">"Design Centrado no Usuário: Criando para TODAS"</h5>
+                                        <div class="d-flex align-items-center mt-3 text-muted">
+                                            <i class="bi bi-calendar-event me-2"></i>
+                                            <span class="me-3">28/10/2025</span>
+                                            <i class="bi bi-clock me-2"></i>
+                                            <span>16h - 18h</span>
+                                        </div>
+                                        <p class="card-text mt-3">Eliane abordará a importância da diversidade no design de aplicativos e ferramentas digitais que consideram todas as usuárias.</p>
+                                        <a href="#" class="btn btn-rosa mt-2">Inscreva-se Gratuitamente</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Palestrante 9 -->
+                    <div class="col-md-6 mb-4 extra-mentoria d-none">
+                        <div class="card-mentoria h-100 border-0 shadow-sm d-flex flex-row">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="https://randomuser.me/api/portraits/women/65.jpg" class="img-fluid rounded-start h-100" alt="Ana Karoline Ribeiro" style="object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div>
+                                                <h3 class="card-title mb-1">Dr. Sophia Chen</h3>
+                                                <p class="text-muted small">Senior AI Researcher at MIT | Ethical AI Pioneer</p>
+                                            </div>
+                                            <span class="badge bg-rosa text-white">Online</span>
+                                        </div>
+                                        <h5 class="mt-3 text-rosa">"Decolonizing Algorithms: Global Perspectives on Fair Machine Learning"</h5>
+                                        <div class="d-flex align-items-center mt-3 text-muted">
+                                            <i class="bi bi-calendar-event me-2"></i>
+                                            <span class="me-3">25/10/2025</span>
+                                            <i class="bi bi-clock me-2"></i>
+                                            <span>19h - 21h</span>
+                                        </div>
+                                        <p class="card-text mt-3">In this groundbreaking session, Dr. Chen will expose how Western biases permeate AI systems and present innovative frameworks being developed in the Global South to create more equitable technologies.</p>
+                                        <a href="#" class="btn btn-rosa mt-2">Inscreva-se Gratuitamente</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Palestrante 10 -->
+                    <div class="col-md-6 mb-4 extra-mentoria d-none">
+                        <div class="card-mentoria h-100 border-0 shadow-sm d-flex flex-row">
+                            <div class="row g-0">
+                                <div class="col-md-4 ">
+                                    <img src="https://randomuser.me/api/portraits/women/68.jpg" class="img-fluid rounded-start h-100" alt="Eliane Lunguinho" style="object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div>
+                                                <h3 class="card-title mb-1">Prof. Aisha Diallo</h3>
+                                                <p class="text-muted small">UX Director at Spotify | Inclusive Design Advocate</p>
+                                            </div>
+                                            <span class="badge bg-rosa text-white">Presencial - EUA</span>
+                                        </div>
+                                        <h5 class="mt-3 text-rosa">"Beyond Gender Binaries: Designing for the Spectrum of Human Experience"</h5>
+                                        <div class="d-flex align-items-center mt-3 text-muted">
+                                            <i class="bi bi-calendar-event me-2"></i>
+                                            <span class="me-3">28/10/2025</span>
+                                            <i class="bi bi-clock me-2"></i>
+                                            <span>16h - 18h</span>
+                                        </div>
+                                        <p class="card-text mt-3">Prof. Diallo will showcase how African design philosophies are revolutionizing digital interfaces to accommodate diverse cultural contexts and non-Western user paradigms.</p>
+                                        <button class="btn btn-rosa mt-2 btn-inscrever"
+                                                data-mentoria="Transição de carreira: Da biologia à programação"
+                                                data-palestrante="Isabela Albuquerque"
+                                                data-redirect="URL_DA_PAGINA_DE_CONFIRMACAO">
+                                            Inscreva-se Gratuitamente
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="load-more text-center mt-4">
+                    <button id="load-more-btn" class="btn btn-rosa btn-lg">Carregar Mais Mentorias</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (same as your template) -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="text-white mb-4">Mulheres na Tecnologia</h3>
+                    <p>Conectando, inspirando e capacitando mulheres para construir carreiras de sucesso no mundo tech.</p>
+                    <div class="mt-4">
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-linkedin fs-4"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter-x fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube fs-4"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h4 class="text-white mb-4">Links</h4>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Nossas Iniciativas</a></li>
+                        <li><a href="#">Eventos</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h4 class="text-white mb-4">Recursos</h4>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Materiais Gratuitos</a></li>
+                        <li><a href="#">Guia de Carreiras</a></li>
+                        <li><a href="#">Vagas Exclusivas</a></li>
+                        <li><a href="#">Perguntas Frequentes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h4 class="text-white mb-4">Newsletter</h4>
+                    <p>Receba oportunidades e conteúdos exclusivos no seu e-mail.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Seu e-mail">
+                        <button class="btn btn-rosa" type="button">Assinar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4 bg-light opacity-10">
+            
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">© 2025 Mulheres na Tecnologia. Todos os direitos reservados. <br> Desenvolvido por: SQUAD 52 - <strong>RECOD PRO AI</strong></p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white me-3">Termos de Uso</a>
+                    <a href="#" class="text-white">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Interatividade mostrar / ocultar Script -->
+    <script src="cursos-internos.js"></script>
+
+    <!-- Dark Mode Script -->
+    <script>
+        const alternador = document.getElementById('alternador');
+        
+        alternador.addEventListener('change', function() {
+            if(this.checked) {
+                document.body.classList.remove('tema-claro');
+                document.body.classList.add('tema-escuro');
+                document.documentElement.setAttribute('data-tema', 'escuro');
+            } else {
+                document.body.classList.remove('tema-escuro');
+                document.body.classList.add('tema-claro');
+                document.documentElement.setAttribute('data-tema', 'claro');
+            }
+        });
+
+       
+    </script>
+</body>
+</html>

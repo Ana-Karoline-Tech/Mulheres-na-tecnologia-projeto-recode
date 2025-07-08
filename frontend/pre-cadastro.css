@@ -112,93 +112,65 @@ body {
   margin-left: 5px;
 }
 
-/* ========== SEÇÃO DE INSTITUIÇÕES PARCEIRAS ========== */
-.secao-apresentacao {
-    padding: 3rem 2rem;
-    text-align: center;
+
+/* Estilos para a tela de pré-cadastro */
+.btn-rosa-outline {
+    border: 2px solid var(--rosa-medio);
+    color: var(--rosa-medio);
+    background-color: transparent;
+    transition: all 0.3s;
+}
+
+.btn-rosa-outline:hover {
+    background-color: var(--rosa-medio);
+    color: white;
+}
+
+.btn-dourado {
     background-color: var(--dourado);
-    margin: 2rem 0;
-    border-radius: 10px;
+    color: var(--azul-escuro);
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s;
 }
 
-.secao-apresentacao h2 {
-    color: var(--azul-medio) !important;
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
+.btn-dourado:hover {
+    background-color: #e6c200;
+    transform: translateY(-2px);
 }
 
-.secao-apresentacao .destaque {
-    font-size: 1.3rem;
-    line-height: 1.8;
+.bg-rosa {
+    background-color: var(--rosa-medio);
 }
 
-/* ========== CARDS DE CURSOS ========== */
-.secao-cursos {
-  padding: 3rem 0;
+.bg-dourado {
+    background-color: var(--dourado);
 }
 
-.card-curso {
-  border: none;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  height: 100%;
-  margin-bottom: 2rem;
+/* Dark Mode */
+.tema-escuro .card[style*="--rosa-claro"] {
+    background-color: var(--azul-escuro) !important;
+    color: var(--texto-escuro);
 }
 
-.card-curso:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+.tema-escuro .btn-rosa-outline {
+    border-color: var(--dourado);
+    color: var(--dourado);
 }
 
-.card-img-top {
-  height: 180px;
-  object-fit: contain;
-  padding: 1rem;
-  background-color: white;
+.tema-escuro .btn-rosa-outline:hover {
+    background-color: var(--dourado);
+    color: var(--azul-escuro);
 }
 
-.card-body {
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
+.tema-escuro .card[style*="--azul-medio"] {
+    background-color: #2a4e6c !important;
 }
 
-.card-title {
-  color: var(--azul-medio);
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.card-text {
-  color: var(--texto-claro);
-  margin-bottom: 1.5rem;
-  flex-grow: 1;
-  line-height: 1.6;
-  text-align: justify;
-}
-
-.btn-saiba-mais {
-  background-color: var(--rosa-medio);
-  color: white;
-  border: none;
-  padding: 8px 20px;
-  border-radius: 5px;
-  font-weight: 500;
-  transition: all 0.3s;
-  align-self: center;
-  margin-top: auto;
-}
-
-.btn-saiba-mais:hover {
-  background-color: var(--rosa-escuro);
-  color: white;
-  transform: scale(1.05);
-}
 
 /* ========== RODAPÉ ========== */
+
+
 footer {
             background: linear-gradient(to right, var(--azul-escuro), var(--azul-medio));
             color: white;
@@ -235,54 +207,53 @@ footer {
         background-color: var(--rosa-escuro) !important;
       }
         
-
 /* ========== DARK MODE ========== */
-body.tema-escuro {
-  background-color: var(--azul-escuro);
-  color: var(--texto-escuro);
-}
+        body.tema-escuro {
+        background-color: var(--azul-escuro);
+        color: var(--texto-escuro);
+     }
 
-.tema-escuro .secao-parceiros {
-  background-color: #4a1e5a;
-}
+        .tema-escuro .secao-parceiros {
+        background-color: #4a1e5a;
+        }
 
-.tema-escuro .card-curso {
-  background-color: #16213e;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
+        .tema-escuro .card-curso {
+        background-color: #16213e;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
 
-.tema-escuro .card-title {
-  color: var(--dourado);
-}
+        .tema-escuro .card-title {
+        color: var(--dourado);
+        }
 
-.tema-escuro .card-text {
-  color: var(--texto-escuro);
-}
+        .tema-escuro .card-text {
+        color: var(--texto-escuro);
+        }
 
-.tema-escuro .card-img-top {
-  background-color: #2a3a5a;
-}
+        .tema-escuro .card-img-top {
+        background-color: #2a3a5a;
+        }
 
-.tema-escuro .secao-apresentacao {
-    background-color: #4a1e5a;
-    color: var(--texto-escuro);
-}
+        .tema-escuro .secao-apresentacao {
+            background-color: #4a1e5a;
+            color: var(--texto-escuro);
+        }
 
-/* ========== RESPONSIVIDADE ========== */
-@media (max-width: 768px) {
-  .secao-parceiros h2 {
-    font-size: 1.5rem;
-  }
-  
-  .secao-parceiros p {
-    font-size: 1rem;
-  }
-  
-  .card-title {
-    font-size: 1.1rem;
-  }
-  
-  .card-text {
-    font-size: 0.9rem;
-  }
-}
+        /* ========== RESPONSIVIDADE ========== */
+        @media (max-width: 768px) {
+        .secao-parceiros h2 {
+            font-size: 1.5rem;
+        }
+        
+        .secao-parceiros p {
+            font-size: 1rem;
+        }
+        
+        .card-title {
+            font-size: 1.1rem;
+        }
+        
+        .card-text {
+            font-size: 0.9rem;
+        }
+        }

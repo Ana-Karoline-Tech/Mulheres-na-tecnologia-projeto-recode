@@ -44,49 +44,49 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 4. Função principal de filtragem
-    function filtrarMentorias() {
-        const tiposSelecionados = {
-            mentoria: tipoMentorias.checked,
-            curso: tipoCursos.checked,
-            workshop: tipoWorkshops.checked
-        };
+    // 4. Função principal de filtragem (versão corrigida)
+function filtrarMentorias() {
+    const tiposSelecionados = {
+        mentoria: tipoMentorias.checked,
+        curso: tipoCursos.checked,
+        workshop: tipoWorkshops.checked
+    };
+    
+    const formatosSelecionados = {
+        online: formatoOnline.checked,
+        presencial: formatoPresencial.checked
+    };
+    
+    const areaSelecionada = areaInteresse.value.toLowerCase().trim();
+    const instrutorSelecionado = filtroInstrutor.value.toLowerCase().trim();
+    
+    // Resetar contagem ao filtrar
+    mentoriasVisiveis = mentoriasPorPagina;
+    
+    todasMentorias.forEach((mentoria, index) => {
+        const tipo = mentoria.getAttribute('data-tipo');
+        const formato = mentoria.getAttribute('data-formato');
+        const area = mentoria.getAttribute('data-area').toLowerCase().trim();
+        const instrutor = (mentoria.getAttribute('data-instrutor') || '').toLowerCase().trim();
         
-        const formatosSelecionados = {
-            online: formatoOnline.checked,
-            presencial: formatoPresencial.checked
-        };
+        const deveMostrar = (
+            tiposSelecionados[tipo] &&
+            formatosSelecionados[formato] &&
+            (areaSelecionada === 'todas as áreas' || area === areaSelecionada) &&
+            (instrutorSelecionado === 'todas' || instrutor.includes(instrutorSelecionado))
+        );
         
-        const areaSelecionada = areaInteresse.value;
-        const instrutorSelecionado = filtroInstrutor.value;
-        
-        // Resetar contagem ao filtrar
-        mentoriasVisiveis = mentoriasPorPagina;
-        
-        todasMentorias.forEach((mentoria, index) => {
-            const tipo = mentoria.getAttribute('data-tipo');
-            const formato = mentoria.getAttribute('data-formato');
-            const area = mentoria.getAttribute('data-area');
-            const instrutor = mentoria.getAttribute('data-instrutor') || '';
-            
-            const deveMostrar = (
-                tiposSelecionados[tipo] &&
-                formatosSelecionados[formato] &&
-                (areaSelecionada === 'Todas as áreas' || area === areaSelecionada) &&
-                (instrutorSelecionado === 'Todas' || instrutor === instrutorSelecionado)
-            );
-            
-            if (deveMostrar) {
-                mentoria.style.display = 'block';
-                // Mostra apenas as primeiras mentorias
-                mentoria.classList.toggle('d-none', index >= mentoriasVisiveis);
-            } else {
-                mentoria.style.display = 'none';
-            }
-        });
-        
-        atualizarBotao();
-    }
+        if (deveMostrar) {
+            mentoria.style.display = 'block';
+            mentoria.classList.toggle('d-none', index >= mentoriasVisiveis);
+        } else {
+            mentoria.style.display = 'none';
+            mentoria.classList.add('d-none');
+        }
+    });
+    
+    atualizarBotao();
+}
 
     // 5. Atualizar visibilidade do botão
     function atualizarBotao() {

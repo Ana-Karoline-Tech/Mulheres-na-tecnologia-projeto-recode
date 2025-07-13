@@ -266,6 +266,28 @@ body {
   background: rgba(255,255,255,0.2);
   transform: translateY(-3px);
 }
+/* BTN BUSCAR MAIS OU MENOS CURSOS */
+#load-more-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#load-more-btn:hover {
+    background-color: #0056b3;
+}
+
+#load-more-container {
+    text-align: center;
+    width: 100%;
+    clear: both;
+}
 
         /* ========== RODAPÉ ========== */
 footer {

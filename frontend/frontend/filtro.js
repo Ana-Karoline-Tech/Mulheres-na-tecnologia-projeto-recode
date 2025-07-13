@@ -6,12 +6,45 @@ document.addEventListener('DOMContentLoaded', function() {
     const formatoOnline = document.getElementById('online');
     const formatoPresencial = document.getElementById('presencial');
     const areaInteresse = document.querySelector('.form-select');
+    const filtroInstrutor = document.querySelector('select[data-filtro="instrutor"]');
     
-    // Elemento container das mentorias
-    const mentoriasContainer = document.getElementById('mentorias-container');
-    const todasMentorias = document.querySelectorAll('.col-md-6.mb-4');
+    // Elementos das mentorias
+    const todasMentorias = Array.from(document.querySelectorAll('.col-md-6.mb-4'));
+    const loadMoreBtn = document.getElementById('load-more-btn');
     
-    // Função para filtrar as mentorias
+    // Variáveis de controle
+    let mentoriasVisiveis = 4; // Mostra 4 mentorias inicialmente
+    const mentoriasPorPagina = 4; // Quantidade a carregar por clique
+
+    // 1. Inicialização
+    function init() {
+        selecionarTodosFiltros();
+        esconderMentoriasExtras();
+        filtrarMentorias();
+        centralizarBotao();
+    }
+
+    // 2. Selecionar todos os filtros inicialmente
+    function selecionarTodosFiltros() {
+        tipoMentorias.checked = true;
+        tipoCursos.checked = true;
+        tipoWorkshops.checked = true;
+        formatoOnline.checked = true;
+        formatoPresencial.checked = true;
+        areaInteresse.value = 'Todas as áreas';
+        filtroInstrutor.value = 'Todas';
+    }
+
+    // 3. Esconder mentorias extras no carregamento
+    function esconderMentoriasExtras() {
+        todasMentorias.forEach((mentoria, index) => {
+            if (index >= mentoriasVisiveis) {
+                mentoria.classList.add('d-none');
+            }
+        });
+    }
+
+    // 4. Função principal de filtragem
     function filtrarMentorias() {
         const tiposSelecionados = {
             mentoria: tipoMentorias.checked,
@@ -25,68 +58,78 @@ document.addEventListener('DOMContentLoaded', function() {
         };
         
         const areaSelecionada = areaInteresse.value;
+        const instrutorSelecionado = filtroInstrutor.value;
         
-        todasMentorias.forEach(mentoria => {
-            // Verificar se a mentoria corresponde aos tipos selecionados
-            const cardText = mentoria.querySelector('.card-body').textContent.toLowerCase();
-            const tipoMatch = 
-                (tiposSelecionados.mentoria && cardText.includes('mentoria')) ||
-                (tiposSelecionados.curso && cardText.includes('curso')) ||
-                (tiposSelecionados.workshop && cardText.includes('workshop'));
+        // Resetar contagem ao filtrar
+        mentoriasVisiveis = mentoriasPorPagina;
+        
+        todasMentorias.forEach((mentoria, index) => {
+            const tipo = mentoria.getAttribute('data-tipo');
+            const formato = mentoria.getAttribute('data-formato');
+            const area = mentoria.getAttribute('data-area');
+            const instrutor = mentoria.getAttribute('data-instrutor') || '';
             
-            // Verificar se a mentoria corresponde aos formatos selecionados
-            const badge = mentoria.querySelector('.badge').textContent.toLowerCase();
-            const formatoMatch = 
-                (formatosSelecionados.online && badge.includes('online')) ||
-                (formatosSelecionados.presencial && badge.includes('presencial'));
+            const deveMostrar = (
+                tiposSelecionados[tipo] &&
+                formatosSelecionados[formato] &&
+                (areaSelecionada === 'Todas as áreas' || area === areaSelecionada) &&
+                (instrutorSelecionado === 'Todas' || instrutor === instrutorSelecionado)
+            );
             
-            // Verificar se a mentoria corresponde à área de interesse selecionada
-            let areaMatch = true;
-            if (areaSelecionada !== 'Todas as áreas') {
-                areaMatch = cardText.includes(areaSelecionada.toLowerCase());
-            }
-            
-            // Mostrar ou esconder a mentoria com base nos filtros
-            if (tipoMatch && formatoMatch && areaMatch) {
+            if (deveMostrar) {
                 mentoria.style.display = 'block';
+                // Mostra apenas as primeiras mentorias
+                mentoria.classList.toggle('d-none', index >= mentoriasVisiveis);
             } else {
                 mentoria.style.display = 'none';
             }
         });
+        
+        atualizarBotao();
     }
-    
-    // Adicionar event listeners para os filtros
-    tipoMentorias.addEventListener('change', filtrarMentorias);
-    tipoCursos.addEventListener('change', filtrarMentorias);
-    tipoWorkshops.addEventListener('change', filtrarMentorias);
-    formatoOnline.addEventListener('change', filtrarMentorias);
-    formatoPresencial.addEventListener('change', filtrarMentorias);
-    areaInteresse.addEventListener('change', filtrarMentorias);
-    
-    // Carregar mais mentorias
-    const loadMoreBtn = document.getElementById('load-more-btn');
-    const extraMentorias = document.querySelectorAll('.extra-mentoria');
-    let mentoriasVisiveis = 2; // Começa mostrando 2 mentorias
-    
+
+    // 5. Atualizar visibilidade do botão
+    function atualizarBotao() {
+        const mentoriasFiltradas = todasMentorias.filter(mentoria => 
+            mentoria.style.display !== 'none'
+        );
+        
+        const mentoriasOcultas = mentoriasFiltradas.filter(mentoria => 
+            mentoria.classList.contains('d-none')
+        );
+        
+        loadMoreBtn.style.display = mentoriasOcultas.length > 0 ? 'block' : 'none';
+        centralizarBotao();
+    }
+
+    // 6. Centralizar o botão
+    function centralizarBotao() {
+        loadMoreBtn.style.margin = '20px auto';
+        loadMoreBtn.style.display = 'block';
+    }
+
+    // 7. Carregar mais mentorias
     loadMoreBtn.addEventListener('click', function() {
-        // Mostrar as próximas 2 mentorias
-        for (let i = mentoriasVisiveis; i < mentoriasVisiveis + 2 && i < extraMentorias.length; i++) {
-            extraMentorias[i].classList.remove('d-none');
-        }
+        const mentoriasOcultas = todasMentorias.filter(mentoria => 
+            mentoria.style.display !== 'none' && 
+            mentoria.classList.contains('d-none')
+        );
         
-        mentoriasVisiveis += 2;
+        // Mostra as próximas mentorias
+        mentoriasOcultas.slice(0, mentoriasPorPagina).forEach(mentoria => {
+            mentoria.classList.remove('d-none');
+        });
         
-        // Esconder o botão se todas as mentorias estiverem visíveis
-        if (mentoriasVisiveis >= extraMentorias.length) {
-            loadMoreBtn.style.display = 'none';
-        }
-        
-        // Reaplicar os filtros após mostrar mais mentorias
-        filtrarMentorias();
+        mentoriasVisiveis += mentoriasPorPagina;
+        atualizarBotao();
     });
-    
-    // Inicialmente esconder o botão se não houver mentorias extras
-    if (extraMentorias.length === 0) {
-        loadMoreBtn.style.display = 'none';
-    }
+
+    // Event listeners para filtros
+    [tipoMentorias, tipoCursos, tipoWorkshops, formatoOnline, formatoPresencial, 
+     areaInteresse, filtroInstrutor].forEach(element => {
+        element.addEventListener('change', filtrarMentorias);
+    });
+
+    // Inicializar
+    init();
 });

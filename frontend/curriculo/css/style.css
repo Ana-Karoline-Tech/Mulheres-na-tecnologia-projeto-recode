@@ -1,0 +1,182 @@
+/* ========== VARIÁVEIS DE CORES ========== */
+:root {
+  --rosa-claro: #fff0f5;
+  --rosa-claro: #e0a1c1;
+  --rosa-medio: #ff69b4;
+  --rosa-escuro: #d7368a;
+  --dourado: #ffd700;
+  --azul-medio: #4682b4;
+  --azul-escuro: #1a1a2e;
+  --texto-claro: #333;
+  --texto-escuro: #e6e6e6;
+}
+
+/* ========== ESTILOS PARA O CADASTRO DE CURRÍCULO ========== */
+.secao-cadastro, .secao-lista {
+    padding: 3rem 0;
+}
+
+.secao-cadastro h2, .secao-lista h2 {
+    color: var(--rosa-escuro);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.secao-cadastro p, .secao-lista p {
+    color: var(--texto-claro);
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.card-curriculo {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.card-curriculo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-curriculo .card-title {
+    color: var(--azul-medio);
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    border-bottom: 2px solid var(--rosa-medio);
+    padding-bottom: 0.5rem;
+}
+
+.form-text {
+    color: var(--azul-medio);
+}
+
+.form-control {
+    border: 1px solid var(--rosa-medio);
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+.form-control:focus {
+    border-color: var(--dourado);
+    box-shadow: 0 0 0 0.25rem rgba(255, 105, 180, 0.25);
+}
+
+/* Estilos para a tabela */
+.table {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table th {
+    background-color: var(--rosa-medio);
+    color: white;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--rosa-escuro);
+}
+
+/* Estilos para o dark mode */
+/* ========== DARK MODE ========== */
+body.tema-escuro {
+    background-color: var(--azul-escuro);
+    color: var(--texto-escuro);
+}
+
+.tema-escuro .obs {
+    color: #fff;
+}
+
+.tema-escuro .card-curriculo {
+    background-color: #16213e;
+    color: var(--texto-escuro);
+}
+
+.tema-escuro .form-control,
+.tema-escuro .form-select,
+.tema-escuro .form-control:focus {
+    background-color: #2a3a5a;
+    color: var(--texto-escuro);
+    border-color: #4a1e5a;
+}
+
+
+
+.tema-escuro .table {
+    background-color: #2a3a5a;
+    color: var(--texto-escuro);
+}
+
+.tema-escuro .table th {
+    background-color: #4a1e5a;
+    color: white;
+}
+
+.tema-escuro .secao-cadastro h2,
+.tema-escuro .secao-lista h2 {
+    color: var(--dourado);
+}
+
+.tema-escuro .text-muted {
+    color: var(--rosa-claro) !important;
+}
+
+.tema-escuro .secao-cadastro h2, 
+.tema-escuro .secao-lista h2 {
+    color: var(--dourado);
+}
+
+.tema-escuro .card-curriculo {
+    background-color: #16213e;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.tema-escuro .card-curriculo .card-title {
+    color: var(--dourado);
+}
+
+.tema-escuro .table {
+    background-color: #2a3a5a;
+    color: var(--texto-escuro);
+}
+
+.tema-escuro .table th {
+    background-color: #4a1e5a;
+}
+
+/* .tema-escuro .form-text {
+    color: var(--rosa-medio);
+} */
+
+/* .tema-escuro .form-label {
+    color: var(--dourado);
+} */
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .secao-cadastro h2, .secao-lista h2 {
+        font-size: 1.5rem;
+    }
+    
+    .secao-cadastro p, .secao-lista p {
+        font-size: 1rem;
+    }
+    
+    .card-curriculo .card-title {
+        font-size: 1.1rem;
+    }
+}

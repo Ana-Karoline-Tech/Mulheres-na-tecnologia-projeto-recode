@@ -1,0 +1,112 @@
+/* Modal centralizado e com sombra */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    padding: 32px 28px 18px 28px;
+    width: 100%;
+    max-width: 650px;
+    min-width: 320px;
+    position: relative;
+}
+
+.modal-header {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.modal-header h2 {
+    font-size: 2rem;
+    color: #e83e8c;
+    margin: 0 auto;
+}
+
+.modal-close {
+    position: absolute;
+    right: 22px;
+    top: 18px;
+    font-size: 1.5rem;
+    color: #e83e8c;
+    cursor: pointer;
+}
+
+.modal-form .row {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 12px;
+}
+
+.modal-form .col-md-6 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.modal-field:focus,
+.form-control:focus,
+select:focus,
+textarea:focus {
+    border-color: #e83e8c;
+    box-shadow: 0 0 0 2px #f8d6e6;
+    outline: none;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.modal-field, .form-control, select, textarea {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+    font-size: 1rem;
+    background: #f8f9fa;
+}
+
+#logo-preview {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f8f9fa;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.button.green {
+    background: #28a745;
+    color: #fff;
+}
+
+.button.red {
+    background: #dc3545;
+    color: #fff;
+}
+
+@media (max-width: 700px) {
+    .modal-content {
+        padding: 18px 8px;
+        max-width: 98vw;
+    }
+    .modal-form .row {
+        flex-direction: column;
+        gap: 0;
+    }
+}

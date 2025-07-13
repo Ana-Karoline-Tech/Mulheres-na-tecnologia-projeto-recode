@@ -1,0 +1,286 @@
+/* Reset e configurações básicas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== ESTILOS GERAIS ========== */
+:root {
+    --rosa-claro: #fff0f5;
+    --rosa-medio: #ff69b4;
+    --rosa-escuro: #d7368a;
+    --dourado: #ffd700;
+    --azul-medio: #4682b4;
+    --azul-escuro: #1a1a2e;
+    --texto-claro: #333;
+    --texto-escuro: #e6e6e6;
+}
+
+body {
+  background-color: #fff0f5; /* Rosa claro */
+  color: #333;
+  transition: all 0.3s ease;
+  line-height: 1.6;
+  overflow-x: hidden
+}
+
+.container {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Estilos do tema claro (padrão) */
+body {
+  background-color: #fff0f5; /* Rosa claro */
+  color: #333;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tema-claro {
+  background-color: #fff0f5;
+  color: #333;
+}
+
+/* Navbar */
+.navbar-rosa {
+  background-color: #ff69b4 !important; /* Rosa médio */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  border-radius: 0; /* Remove cantos arredondados, se houver */
+  box-sizing: border-box;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar-rosa .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+}
+
+.navbar-rosa .nav-link:hover {
+  color: #ffd700 !important; /* Dourado */
+}
+
+.logo-navbar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Carrossel */
+.imagem-carrossel {
+  height: 500px; /* Aumentado conforme solicitado */
+  object-fit: cover;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #ff69b4; /* Rosa médio */
+  border-radius: 50%;
+  padding: 15px;
+}
+
+/* Cards */
+.card-ods {
+  border: 2px solid #4682b4; /* Azul médio */
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.card-ods:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(70, 130, 180, 0.2); /* Azul médio com transparência */
+}
+
+.card-ods .card-title {
+  color: #ff69b4; /* Rosa médio */
+}
+
+/* Botões */
+.btn-dourado {
+  background-color: #ffd700; /* Dourado */
+  color: #333;
+  border: none;
+  font-weight: 500;
+}
+
+.btn-dourado:hover {
+  background-color: #daa520; /* Dourado mais escuro */
+  color: #fff;
+}
+
+/* Seção de destaque */
+.destaque {
+  padding: 2rem 0;
+}
+
+.img-destaque {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border: 3px solid #ff69b4; /* Rosa médio */
+}
+
+.titulo-destaque {
+  color: #4682b4; /* Azul médio */
+  margin: 1rem 0;
+}
+
+/* Featurettes */
+.titulo-feature {
+  color: #ff69b4; /* Rosa médio */
+  margin-bottom: 1rem;
+}
+
+.subtitulo-feature {
+  color: #4682b4; /* Azul médio */
+}
+
+.representantes{
+    text-align: justify;
+}
+
+.lead{
+    text-align: justify;
+}
+.img-feature {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.divisor {
+  margin: 3rem 0;
+  border-top: 2px solid #ffd700; /* Dourado */
+}
+            /* FOOTER */
+footer {
+            background: linear-gradient(to right, var(--azul-escuro), var(--azul-medio));
+            color: white;
+            padding: 60px 0 30px;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            margin-right: calc(-50vw + 50%);
+            position: relative;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--dourado);
+            padding-left: 5px;
+        }
+
+      .btn-rosa {
+        background-color: var(--rosa-medio) !important;
+        color: #fff !important;
+        border: none;
+        border-radius: 0 25px 25px 0;
+        font-weight: 600;
+        transition: background 0.3s;
+      }
+
+      .btn-rosa:hover {
+        background-color: var(--rosa-escuro) !important;
+      }
+
+
+/* Dark Mode - Estilos do tema escuro */
+body.tema-escuro {
+  background-color: #1a1a2e;
+  color: #e6e6e6;
+}
+
+.tema-escuro .navbar-rosa {
+  background-color:  var(--rosa-medio) !important;
+}
+
+.tema-escuro .card-ods {
+  background-color: #16213e;
+  border-color: #ffd700;
+}
+
+.tema-escuro .card-ods .card-title {
+  color: #ffd700;
+}
+
+.tema-escuro .card-ods .night-mode {
+  color: #fff;
+}
+
+
+.tema-escuro .btn-dourado {
+  background-color: #b8860b;
+  color: #fff;
+}
+
+.tema-escuro .titulo-destaque,
+.tema-escuro .titulo-feature {
+  color: #ff69b4;
+}
+
+.tema-escuro .subtitulo-feature {
+  color: #4682b4;
+}
+
+/* Alternador de tema (Dark Mode) */
+.alternador-tema {
+  position: relative;
+  margin: 25px;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.rotulo-alternador {
+  background-color: #111;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px;
+  position: relative;
+  height: 22px;
+  width: 40px;
+  transform: scale(1.5);
+}
+
+.rotulo-alternador .bola-alternador {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 1.5px;
+  left: 1.5px;
+  height: 18px;
+  width: 18px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .rotulo-alternador .bola-alternador {
+  transform: translateX(18px);
+}
+
+.rotulo-alternador .fa-moon {
+  color: #ffd700; /* Dourado */
+}
+
+.rotulo-alternador .fa-sun {
+  color: #ff69b4; /* Rosa médio */
+}

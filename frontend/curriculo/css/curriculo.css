@@ -1,0 +1,81 @@
+/* ========== NAVBAR ========== */
+.navbar {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-rosa {
+    background-color: var(--rosa-medio) !important;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-navbar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+.nav-link:hover {
+    color: var(--dourado) !important;
+}
+
+/* ========== ALTERNADOR DE TEMA ========== */
+.alternador-tema {
+    position: relative;
+    margin: 25px
+}
+
+.checkbox-alternador {
+    opacity: 0;
+    position: absolute;
+}
+
+.rotulo-alternador {
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px;
+    position: relative;
+    height: 22px;
+    width: 40px;
+}
+
+.rotulo-alternador .bola-alternador {
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 1.5px;
+    left: 1.5px;
+    height: 18px;
+    width: 18px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox-alternador:checked + .rotulo-alternador .bola-alternador {
+    transform: translateX(18px);
+}
+
+.rotulo-alternador .bi-sun {
+    color: var(--dourado);
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.rotulo-alternador .bi-moon {
+    color: var(--rosa-medio);
+    font-size: 12px;
+    margin-left: 5px;
+}

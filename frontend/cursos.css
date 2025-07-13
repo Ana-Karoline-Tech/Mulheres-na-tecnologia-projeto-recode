@@ -1,0 +1,288 @@
+/* ========== VARIÁVEIS DE CORES ========== */
+:root {
+  --rosa-claro: #fff0f5;
+  --rosa-medio: #ff69b4;
+  --rosa-escuro: #d7368a;
+  --dourado: #ffd700;
+  --azul-medio: #4682b4;
+  --azul-escuro: #1a1a2e;
+  --texto-claro: #333;
+  --texto-escuro: #e6e6e6;
+}
+
+/* ========== ESTILOS GERAIS ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--rosa-claro);
+  color: var(--texto-claro);
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ========== NAVEGAÇÃO ========== */
+.navbar-rosa {
+  background-color: #ff69b4 !important; /* Rosa médio */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  border-radius: 0; /* Remove cantos arredondados, se houver */
+  box-sizing: border-box;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.logo-navbar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav-link {
+  color: white !important;
+  font-weight: 500;
+  margin: 0 10px;
+}
+
+.nav-link:hover {
+  color: var(--dourado) !important;
+}
+
+/* ========== ALTERNADOR DE TEMA (DARK MODE) ========== */
+.alternador-tema {
+  position: relative;
+  margin: 25px
+}
+
+.checkbox-alternador {
+  opacity: 0;
+  position: absolute;
+}
+
+.rotulo-alternador {
+  background-color: #111;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px;
+  position: relative;
+  height: 22px;
+  width: 40px;
+}
+
+.rotulo-alternador .bola-alternador {
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 1.5px;
+  left: 1.5px;
+  height: 18px;
+  width: 18px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.checkbox-alternador:checked + .rotulo-alternador .bola-alternador {
+  transform: translateX(18px);
+}
+
+.rotulo-alternador .bi-sun {
+  color: var(--dourado);
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.rotulo-alternador .bi-moon {
+  color: var(--rosa-medio);
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+/* ========== SEÇÃO DE INSTITUIÇÕES PARCEIRAS ========== */
+.secao-apresentacao {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: var(--dourado);
+    margin: 2rem 0;
+    border-radius: 10px;
+}
+
+.secao-apresentacao h2 {
+    color: var(--azul-medio) !important;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.secao-apresentacao .destaque {
+    font-size: 1.3rem;
+    line-height: 1.8;
+}
+
+/* ========== CARDS DE CURSOS ========== */
+.secao-cursos {
+  padding: 3rem 0;
+}
+
+.card-curso {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  margin-bottom: 2rem;
+}
+
+.card-curso:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  height: 180px;
+  object-fit: contain;
+  padding: 1rem;
+  background-color: white;
+}
+
+.card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  color: var(--azul-medio);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.card-text {
+  color: var(--texto-claro);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.btn-saiba-mais {
+  background-color: var(--rosa-medio);
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.3s;
+  align-self: center;
+  margin-top: auto;
+}
+
+.btn-saiba-mais:hover {
+  background-color: var(--rosa-escuro);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* ========== RODAPÉ ========== */
+footer {
+            background: linear-gradient(to right, var(--azul-escuro), var(--azul-medio));
+            color: white;
+            padding: 60px 0 30px;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            margin-right: calc(-50vw + 50%);
+            position: relative;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--dourado);
+            padding-left: 5px;
+        }
+
+      .btn-rosa {
+        background-color: var(--rosa-medio) !important;
+        color: #fff !important;
+        border: none;
+        border-radius: 0 25px 25px 0;
+        font-weight: 600;
+        transition: background 0.3s;
+      }
+
+      .btn-rosa:hover {
+        background-color: var(--rosa-escuro) !important;
+      }
+        
+
+/* ========== DARK MODE ========== */
+body.tema-escuro {
+  background-color: var(--azul-escuro);
+  color: var(--texto-escuro);
+}
+
+.tema-escuro .secao-parceiros {
+  background-color: #4a1e5a;
+}
+
+.tema-escuro .card-curso {
+  background-color: #16213e;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.tema-escuro .card-title {
+  color: var(--dourado);
+}
+
+.tema-escuro .card-text {
+  color: var(--texto-escuro);
+}
+
+.tema-escuro .card-img-top {
+  background-color: #2a3a5a;
+}
+
+.tema-escuro .secao-apresentacao {
+    background-color: #4a1e5a;
+    color: var(--texto-escuro);
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 768px) {
+  .secao-parceiros h2 {
+    font-size: 1.5rem;
+  }
+  
+  .secao-parceiros p {
+    font-size: 1rem;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+  }
+}

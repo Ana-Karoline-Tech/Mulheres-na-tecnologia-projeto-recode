@@ -1,0 +1,26 @@
+.rodape {
+    background-color: var(--azul-medio);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+.rodape a {
+    color: var(--dourado);
+    text-decoration: none;
+}
+
+.rodape a:hover {
+    color: var(--rosa-medio);
+    text-decoration: underline;
+}
+
+.botao-topo {
+    margin-left: 1rem;
+}
+
+/* Dark Mode */
+.tema-escuro .rodape {
+    background-color: var(--azul-escuro);
+}
